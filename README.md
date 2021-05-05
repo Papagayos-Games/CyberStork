@@ -4,4 +4,4 @@ Bienvenido al repositorio de **Juego1** un juego desarrollado por **Papagayos Ga
 
 Se trata de un proyecto con fines educativos para la asigantura de **Proyectos 3** de la **Universidad Complutense de Madrid**.
 
-Si quieres saber más sobre nosotros y sobre el juego entra en la [wiki](https://github.com/Papagayos-Games/Juego1/wiki/Menu-principal)
+Si quieres saber más sobre nosotros y sobre el juego entra en la [wiki](https://github.com/Papagayos-Games/CyberStork/wiki/Menu-Principal)

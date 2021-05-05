@@ -55,8 +55,3 @@
 [Bb]uild
 
 # Don't ignore
-!bin/Ogre/plugins.cfg
-![Ee]ngine/[Dd]ependencies/fmod/lib/*.lib
-![Ee]ngine/[Dd]ependencies/fmod/*dll
-![Ee]ngine/[Dd]ependencies/lua/*.a
-![Ee]ngine/[Dd]ependencies/lua/*.dll

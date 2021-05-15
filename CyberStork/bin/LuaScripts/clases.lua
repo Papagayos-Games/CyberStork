@@ -2,3 +2,4 @@
 default = loadfile("LuaScripts/default.lua")()
 b = loadfile("LuaScripts/prueba.lua")()
 miclase = loadfile("LuaScripts/mi_clase.lua")()
+playerController = loadfile("LuaScripts/playerController.lua")()

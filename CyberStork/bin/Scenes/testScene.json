@@ -17,6 +17,9 @@
       },
       {
         "Prefab": "penguin2"
+      },
+      {
+        "Prefab": "meteorito"
       }
     ]
 }

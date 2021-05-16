@@ -14,7 +14,8 @@
         "Component": "MeshComponent",
         "Type": "Render",
         "Parameters": {
-          "meshName": "penguin"
+          "meshName": "penguin",
+          "meshMaterial": "Practica1_Azulejo"
         }
       },
       {

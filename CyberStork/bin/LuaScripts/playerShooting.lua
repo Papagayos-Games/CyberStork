@@ -25,7 +25,7 @@ end
 
 playerShooting["start"] = function (_self, lua)
     _self.time = 0
-    print(_self.time)
+   -- print(_self.time)
     print("Start: PlayerShooting")
 
 end
@@ -33,14 +33,14 @@ end
 playerShooting["update"] = function (_self, lua)
     --print("Update: PlayerShooting")
     
-    print(_self.time)
+   -- print(_self.time)
     --Temporal hasta que haya una gestion del tiempo por ticks
     _self.time = _self.time + 1
 
     if _self.time >= _self.shootBulletTime then
         print("Disparo xD")
         local bala = lua:instantiate(_self.object)
-        lua:getRigidbody(bala):setPosition()
+       -- lua:getRigidbody(bala):setPosition()
         _self.time = 0
     end 
 

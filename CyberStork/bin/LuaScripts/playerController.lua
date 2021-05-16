@@ -28,10 +28,10 @@ playerController["start"] = function (_self, lua)
     _self.position = _self.transform:getPosition()
 
     --Tamaño de la ventana en Y
-    _self.limitY = lua:getWindowGenerator():getWindowHeight()
+    _self.limitY = lua:getOgreContext():getWindowHeight()
 
     --Camara principal de la escena
-    _self.mainCamera = lua:getCamera(lua:getEntity("testScene0"))
+    _self.mainCamera = lua:getCamera(lua:getEntity("testScene"))
 
     --Posicion del pinguino en el viewport
     _self.screenPosition = _self.mainCamera:getScreenCoordinates(_self.position)

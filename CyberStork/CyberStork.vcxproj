@@ -125,13 +125,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\Papagayo-Engine\Engine\include;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Common;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Graphics;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Physics;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Audio;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\LUA;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Input;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\UI;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Common;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Graphics;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Physics;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Audio;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\LUA;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Input;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)bin;$(SolutionDir)dependencies/Papagayo-Engine/Engine/bin</AdditionalLibraryDirectories>
-      <AdditionalDependencies>PapagayoEngine_d.lib;Common_d.lib;Graphics_d.lib;Physics_d.lib;Audio_d.lib;Input_d.lib;LUA_d.lib;OgreMain_d.lib;OgreRTShaderSystem_d.lib;BulletCollision_Debug.lib;BulletDynamics_Debug.lib;BulletInverseDynamics_Debug.lib;BulletSoftBody_Debug.lib;LinearMath_Debug.lib;SDL2.lib;fmodL_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>PapagayoEngine_d.lib;Common_d.lib;Graphics_d.lib;Physics_d.lib;Audio_d.lib;Input_d.lib;LUA_d.lib;OgreMain_d.lib;OgreRTShaderSystem_d.lib;BulletCollision_Debug.lib;BulletDynamics_Debug.lib;BulletInverseDynamics_Debug.lib;BulletSoftBody_Debug.lib;LinearMath_Debug.lib;SDL2.lib;fmodL_vc.lib;UI_d.lib;CEGUIBase-0_d.lib;CEGUIOgreRenderer-0_d.lib;Codec_STBI_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -145,7 +145,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\Papagayo-Engine\Engine\include;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Common;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Graphics;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Physics;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Audio;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\LUA;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Input;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\UI;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Common;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Graphics;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Physics;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Audio;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\LUA;$(SolutionDir)dependencies\Papagayo-Engine\Engine\include\Input;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -153,7 +153,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)bin;$(SolutionDir)dependencies/Papagayo-Engine/Engine/bin</AdditionalLibraryDirectories>
-      <AdditionalDependencies>PapagayoEngine.lib;Common.lib;Graphics.lib;Physics.lib;Audio.lib;Input.lib;LUA.lib;OgreMain.lib;OgreRTShaderSystem.lib;BulletDynamics.lib;BulletCollision.lib;BulletSoftBody.lib;BulletInverseDynamics.lib;LinearMath.lib;SDL2.lib;fmod_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>PapagayoEngine.lib;Common.lib;Graphics.lib;Physics.lib;Audio.lib;Input.lib;LUA.lib;OgreMain.lib;OgreRTShaderSystem.lib;BulletDynamics.lib;BulletCollision.lib;BulletSoftBody.lib;BulletInverseDynamics.lib;LinearMath.lib;SDL2.lib;fmod_vc.lib;UI.lib;CEGUIBase-0.lib;CEGUIOgreRenderer-0.lib;Codec_STBI.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>

@@ -14,8 +14,7 @@
         "Component": "MeshComponent",
         "Type": "Render",
         "Parameters": {
-          "meshName": "penguin",
-          "meshMaterial": "Practica1_Azulejo"
+          "meshName": "penguin"
         }
       },
       {
@@ -38,9 +37,8 @@
         "Component": "LuaComponent",
         "Type": "LUA",
         "Parameters": {
-          "Class": "playerController",
+          "Class": "playerShooting",
           "Parameters" : {
-            "speed" : 3
           }
         }
       }

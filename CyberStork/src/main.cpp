@@ -17,7 +17,7 @@ int main() {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 #endif
 	try {
-		if (!PapagayoEngine::setupInstance("PAPAGAYO ENGINE"))
+		if (!PapagayoEngine::setupInstance("CyberStork"))
 			throw std::exception("Couldn't Initialize Papagayo Engine\n");
 		PapagayoEngine::getInstance()->init();
 	}

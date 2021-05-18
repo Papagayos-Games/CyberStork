@@ -34,14 +34,9 @@
         }
       },
       {
-        "Component": "LuaComponent",
+        "Component": "playerController",
         "Type": "LUA",
         "Parameters": {
-          "Class": "miclase",
-          "Parameters" : {
-              "hp" : 30,
-              "name" : "prueba"
-          }
         }
       }
   ]

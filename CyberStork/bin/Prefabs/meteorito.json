@@ -35,12 +35,9 @@
       }
     },
     {
-      "Component": "LuaComponent",
+      "Component": "meteor",
       "Type": "LUA",
       "Parameters": {
-        "Class": "meteor",
-        "Parameters": {
-        }
       }
     }
   ]

@@ -17,7 +17,28 @@
         "Prefab" : "DefaultLight"
       },
       {
-        "Prefab": "penguin2"
+        "Name": "Player",
+        "Prefab": "Player"
+      },
+      {
+        "Name": "meteorSpawner",
+        "Components":[
+          {
+            "Component": "Transform",
+            "Type": "Common",
+            "Parameters" : {
+              "position" : [0,0,-1500]
+            }
+          }, 
+          {
+            "Component": "spawner",
+            "Type": "LUA",
+            "Parameters":{
+              "spawnObject" : "meteor",
+              "timeToSpawn": 4
+            }
+          }
+        ]
       }
     ]
 }

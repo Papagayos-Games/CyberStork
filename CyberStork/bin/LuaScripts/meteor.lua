@@ -1,51 +1,49 @@
+local JSON = assert(loadfile "LuaScripts/json.lua")()
 local meteor = {}
 
 meteor["instantiate"] = function(params, entity)
-  print("Instantiate: PlayerShooting")
-
+  p = JSON:decode(params)
   local self = {}
-  self.shootBulletTime = 100
-  self.object = "meteorito"
+  
+  --Velocidad de los meteoritos
+  --TO DO: pasar mejor un rango y que asi todos los meteoritos
+  --no tengan la misma velocidad
+  if p.speed ~= nil then
+    self.speed = p.speed
+  else
+    self.speed = 1000
+  end
+
   self.entity = entity
   return self
 end
 
 meteor["start"] = function(_self, lua)
-  local z = lua:getTransform(lua:getEntity("testScene2")):getPosition().z
-  local v3 = Vector3(math.random(-400, 400), math.random(-300, 300), -50)
-  print(v3.x)
-  print(v3.y)
-  print(v3.z)
-  if lua:getEntity("testScene3") == nil then
-    print("ayyy es nulo ")
-  else
-    lua:getRigidbody(lua:getEntity("testScene3")):setPosition(v3)
-  end
-  
-  local v2 = lua:getTransform(lua:getEntity("testScene2")):getPosition()
-  local resta = Vector3(v2.x - v3.x, v2.y - v3.y, v2.z - v3.z)
-  print(resta.x)
-  print(resta.y)
-  print(resta.z)
-  resta:normalize()
-  print(resta.x)
-  print(resta.y)
-  print(resta.z)
-  lua:getRigidbody(lua:getEntity("testScene3")):setLinearVelocity(
-    Vector3(resta.x * 1000, resta.y * 1000, resta.z * 10000))
+  local z = lua:getTransform(_self.entity):getPosition().z
 
-  _self.time = 0
-  print(_self.time)
-  print("Start: meteorito")
+  --Dimensiones del la ventana
+  local halfWidth = (lua:getOgreContext():getWindowWidth()/2)
+  local halfHeight = (lua:getOgreContext():getWindowHeight()/2)
+
+  --TO DO: no hacerlo en base al tamano de la ventana y tener en cuenta que es una camara
+  --en perspectiva
+  local v3 = Vector3(math.random(-halfWidth, halfWidth), math.random(-halfHeight, halfHeight), z)
+  
+  _self.rb = lua:getRigidbody(_self.entity)
+  _self.rb:setPosition(v3)
+  
+  --Cogemos la posicion del player, calculamos nuestra direccion y normalizamos el vector
+  local v2 = lua:getTransform(lua:getEntity("Player")):getPosition()
+  local resta = Vector3(v2.x - v3.x, v2.y - v3.y, v2.z - v3.z)
+  resta:normalize()
+
+  --Setteamos velocidad lineal correspondiente
+  _self.rb:setLinearVelocity(Vector3(resta.x * _self.speed, resta.y * _self.speed, resta.z * _self.speed))
 
 end
 
 meteor["update"] = function(_self, lua)
-    --  print(lua:getTransform(lua:getEntity("testScene3")):getPosition().z)
-  if lua:getTransform(lua:getEntity("testScene3")):getPosition().z > lua:getTransform(lua:getEntity("testScene2")):getPosition().z then
-    print("Destruyeme xD")
-    _self.time = 0
-  end
+  --TO DO: gestion de colisiones con otros objetos y la destruccion cuando supere la z de la camara principal
 
 end
 

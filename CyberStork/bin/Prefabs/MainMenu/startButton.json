@@ -1,0 +1,36 @@
+{
+  "Components": [
+    {
+      "Component": "Button",
+      "Type": "UI",
+      "Parameters": {
+        "position": [ 0.33, 0.1 ],
+        "size": [ 533, 100 ],
+        "name": "StartButton",
+        "text": "JUGAR",
+        "type": "Button",
+        "property": [
+          [
+            "NormalImage",
+            "TaharezLook/ButtonBg"
+          ],
+          [
+            "PushedImage",
+            "TaharezLook/ButtonBg"
+          ],
+          [
+            "HoverImage",
+            "TaharezLook/ButtonBg"
+          ]
+        ]
+      }
+    },
+    {
+      "Component": "PlayButton",
+      "Type": "LUA",
+      "Parameters": {
+
+      }
+    }
+  ]
+}

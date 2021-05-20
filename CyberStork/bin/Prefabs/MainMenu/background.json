@@ -1,0 +1,28 @@
+{
+  "Components": [
+    {
+      "Component": "Image",
+      "Type": "UI",
+      "Parameters": {
+        "position": [ 0, 0],
+        "size": [ 1600, 900],
+        "type": "StaticImage",
+        "name": "Fondo",
+        "property": [
+          [
+            "Image",
+            "TaharezLook/MenuBg"
+          ],
+          [
+            "FrameEnabled",
+            "false"
+          ],
+          [
+            "BackgroundEnabled",
+            "false"
+          ]
+        ]
+      }
+    }
+  ]
+}

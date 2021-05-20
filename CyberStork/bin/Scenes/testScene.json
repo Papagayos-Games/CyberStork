@@ -1,8 +1,9 @@
 {
     "Entities": [
       {
+        "Name": "defaultCamera",
         "Prefab" : "DefaultCamera",
-        "Arguments" : [
+        "Components" : [
           {
             "Component": "Transform",
             "Type": "Common",

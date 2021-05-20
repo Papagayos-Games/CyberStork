@@ -35,13 +35,18 @@
         }
       },
       {
-        "Component": "LuaComponent",
+        "Component": "playerController",
         "Type": "LUA",
         "Parameters": {
-          "Class": "playerController",
-          "Parameters" : {
-            "speed" : 3
-          }
+          "speed" : 5
+        }
+      }
+      ,
+      {
+        "Component": "playerShooting",
+        "Type": "LUA",
+        "Parameters": {
+
         }
       }
   ]

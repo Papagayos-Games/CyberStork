@@ -143,21 +143,36 @@ material IG2App/Smoke_LinealMaterial {
 		}
 	}
 }
+//--------------SKYPLANE--------------//
 
-material SkyPlaneMat{
+material SkyPlaneMat {
 	technique {
 		pass {
-			lighting off
+			vertex_program_ref SpaceVS
+			{ // params -> default_params
+			}
+			
+			fragment_program_ref SpaceFS
+			{ // params -> default_params
+			}
+			
+			texture_unit
+			{ // * -> int 0
+				texture 			lightMap.jpg 2d // archivo
+				tex_address_mode 	clamp 			// sólo configuración
+				filtering 			bilinear 		// de acceso al texel
+			}
+			
 			texture_unit 
-			{ // Texture unit 0
-			texture SkyPlane.jpg
-			colour_op modulate
-			tex_coord_set 0
-		     }
-		 }
+			{ // * -> int 1
+				texture 			SkyPlane.jpg 2d // archivo
+				tex_address_mode 	wrap 			// sólo configuración
+			} // de acceso al texel
+		}
 	} 
 }
 
+//-----------------///
 material IG2App/space {
     technique {
         pass{
@@ -253,32 +268,29 @@ material Practica1_Naranja {
 
 
 //para que el material pueda llamar al vertex Shader
-vertex_program SpaceVS glsl            //nombre para el shader
+vertex_program SpaceVS glsl //nombre para el shader
 {
-    source SpaceVS.glsl                // nombre del archivo del código
-    //parametros que el material le pasa al shader
-    default_params                        // valores para las variable uniform
-    {
-        param_named_auto modelViewProjMat worldviewproj_matrix
-        param_named FZ float 0.5
-        param_named_auto SinTiempo sintime_0_2pi 32 
-    }
+	source SpaceVS.glsl 	// nombre del archivo del código
+	default_params 			// valores para las variable uniform
+	{
+		//AUTOS				NAME				TYPE			VALUE
+		param_named_auto 	modelViewProjMat 					worldviewproj_matrix
+		param_named_auto 	SinTiempo 							sintime_0_2pi 32
+		
+		//MANUAL		NAME	TYPE	VALUE
+		param_named 	ZF 		float 	0.5
+	}
 }
 
-//para que el material pueda llamar al Ftragmen Shader
-fragment_program SpaceFS glsl        //nombre para el shader
+fragment_program SpaceFS glsl //nombre para el shader
 {
-    source SpaceFS.glsl                // nombre del archivo del código
-    //parametros para pasar al shader
-    default_params                        // valores para las variable uniform
-    {
-        param_named texturaL int 0        //    1º unidad de textura ‐> *
-        param_named texturaM int 1        //    2º unidad de textura ‐> *
-        param_named BF float 0.5        //    blending factor
-        //param_named_auto BF time_0_1 10
-        param_named intLuzAmb float 1.0
-
-    }
+	source SpaceFS.glsl 	// nombre del archivo del código
+	default_params 			// valores para las variable uniform
+	{
+		//Manual		NAME		TYPE	VALUE
+		param_named 	texturaL 	int 	0 // 1º unidad de textura -> *
+		param_named 	texturaM 	int 	1 // 2º unidad de textura -> *
+	}
 }
 
 material IG2/ejemplo2GLSL {

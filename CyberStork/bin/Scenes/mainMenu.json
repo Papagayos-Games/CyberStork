@@ -1,0 +1,32 @@
+{
+  "Entities": [
+    {
+      "Name": "defaultCamera",
+      "Prefab": "DefaultCamera",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [ 0, 0, 500 ]
+          }
+        }
+      ]
+    },
+    {
+      "Prefab": "MainMenu/startButton"
+    },
+    {
+      "Prefab": "MainMenu/creditosButton"
+    },
+    {
+      "Prefab": "MainMenu/scoreboardButton"
+    },
+    {
+      "Prefab": "MainMenu/exitButton"
+    },
+    {
+      "Prefab": "pointer"
+    }
+  ]
+}

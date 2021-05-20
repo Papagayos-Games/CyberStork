@@ -14,8 +14,7 @@
         "Component": "MeshComponent",
         "Type": "Render",
         "Parameters": {
-          "meshName": "penguin",
-          "meshMaterial": "Practica1_Azulejo"
+          "meshName": "penguin"
         }
       },
       {
@@ -35,14 +34,9 @@
         }
       },
       {
-        "Component": "LuaComponent",
+        "Component": "playerController",
         "Type": "LUA",
         "Parameters": {
-          "Class": "miclase",
-          "Parameters" : {
-              "hp" : 30,
-              "name" : "prueba"
-          }
         }
       }
   ]

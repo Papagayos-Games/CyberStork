@@ -1,6 +1,7 @@
 {
-    "SceneFiles" :  [
-        "testScene",
-        "test2"
-    ]
+  "SceneFiles": [
+    "mainMenu",
+    "testScene",
+    "test2"
+  ]
 }

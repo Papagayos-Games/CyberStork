@@ -1,6 +1,7 @@
 {
   "SceneFiles": [
     "mainMenu",
+    "controls",
     "testScene",
     "test2"
   ]

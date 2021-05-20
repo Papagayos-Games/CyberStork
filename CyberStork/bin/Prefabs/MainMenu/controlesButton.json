@@ -4,10 +4,10 @@
       "Component": "Button",
       "Type": "UI",
       "Parameters": {
-        "position": [ 0.33, 0.9 ],
+        "position": [ 0.33, 0.7 ],
         "size": [ 533, 100 ],
-        "name": "ExitButton",
-        "text": "SALIR",
+        "name": "ControlesButton",
+        "text": "CONTROLES",
         "type": "Button",
         "property": [
           [
@@ -23,6 +23,13 @@
             "TaharezLook/ButtonBg"
           ]
         ]
+      }
+    },
+    {
+      "Component": "ControlesButton",
+      "Type": "LUA",
+      "Parameters": {
+
       }
     }
   ]

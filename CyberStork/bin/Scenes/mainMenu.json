@@ -17,6 +17,9 @@
       "Prefab": "MainMenu/startButton"
     },
     {
+      "Prefab": "MainMenu/controlesButton"
+    },
+    {
       "Prefab": "MainMenu/creditosButton"
     },
     {

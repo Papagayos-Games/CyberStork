@@ -23,9 +23,9 @@
           "Component": "Image",
           "Type": "UI",
           "Parameters": {
-            "position": [ 0.2, 0.2 ],
+            "position": [ 0.08, 0.2 ],
             "size": [ 200, 400 ],
-            "name": "TaharezLook/MouseBg",
+            "name": "MouseImage",
             "type": "StaticImage",
             "property": [
               [
@@ -41,6 +41,22 @@
                 "false"
               ]
             ]
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TextoControles",
+      "Components": [
+        {
+          "Component": "Label",
+          "Type": "UI",
+          "Parameters": {
+            "position": [ 0.28, 0.2 ],
+            "size": [ 600, 300 ],
+            "name": "Label",
+            "text": "- Movimiento Jugador: Moviendo raton - PowerUp1: click Izq - PowerUp2: click Der",
+            "type": "Label"
           }
         }
       ]

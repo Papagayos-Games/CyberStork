@@ -43,10 +43,11 @@
       }
       ,
       {
-        "Component": "playerShooting",
+        "Component": "spawner",
         "Type": "LUA",
         "Parameters": {
-
+          "spawnObject" : "bullet",
+          "timeToSpawn": 1.5
         }
       }
   ]

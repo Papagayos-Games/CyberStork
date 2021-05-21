@@ -21,21 +21,13 @@
         "Prefab": "Player"
       },
       {
-        "Name": "meteorSpawner",
-        "Components":[
+        "Prefab": "cuervo",
+        "Components" : [
           {
             "Component": "Transform",
             "Type": "Common",
             "Parameters" : {
-              "position" : [0,0,-1500]
-            }
-          }, 
-          {
-            "Component": "spawner",
-            "Type": "LUA",
-            "Parameters":{
-              "spawnObject" : "meteor",
-              "timeToSpawn": 4
+              "position" : [0,0,-500]
             }
           }
         ]

@@ -15,6 +15,35 @@
     },
     {
       "Prefab": "ControlsMenu/backButton"
-    }    
+    },
+    {
+      "Name": "mouseImage",
+      "Components": [
+        {
+          "Component": "Image",
+          "Type": "UI",
+          "Parameters": {
+            "position": [ 0.2, 0.2 ],
+            "size": [ 200, 400 ],
+            "name": "TaharezLook/MouseBg",
+            "type": "StaticImage",
+            "property": [
+              [
+                "Image",
+                "TaharezLook/MouseBg"
+              ],
+              [
+                "FrameEnabled",
+                "false"
+              ],
+              [
+                "BackgroundEnabled",
+                "false"
+              ]
+            ]
+          }
+        }
+      ]
+    }
   ]
 }

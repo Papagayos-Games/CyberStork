@@ -24,6 +24,13 @@
           ]
         ]
       }
+    },
+    {
+      "Component": "ChangeScene",
+      "Type": "LUA",
+      "Parameters": {
+        "scene": "credits"
+      }
     }
   ]
 }

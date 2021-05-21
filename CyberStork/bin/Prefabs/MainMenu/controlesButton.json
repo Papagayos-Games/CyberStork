@@ -4,10 +4,10 @@
       "Component": "Button",
       "Type": "UI",
       "Parameters": {
-        "position": [ 0.33, 0.3 ],
+        "position": [ 0.33, 0.7 ],
         "size": [ 533, 100 ],
-        "name": "ScoreButton",
-        "text": "PUNTUACIONES",
+        "name": "ControlesButton",
+        "text": "CONTROLES",
         "type": "Button",
         "property": [
           [
@@ -29,7 +29,7 @@
       "Component": "ChangeScene",
       "Type": "LUA",
       "Parameters": {
-        "scene": "scoreboard"
+        "scene": "controls"
       }
     }
   ]

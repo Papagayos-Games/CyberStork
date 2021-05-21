@@ -1,6 +1,9 @@
 {
   "SceneFiles": [
     "mainMenu",
+    "controls",
+    "scoreboard",
+    "credits",
     "testScene",
     "test2"
   ]

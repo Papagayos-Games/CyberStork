@@ -4,7 +4,7 @@
       "Component": "Button",
       "Type": "UI",
       "Parameters": {
-        "position": [ 0.33, 0.7 ],
+        "position": [ 0.33, 0.9 ],
         "size": [ 533, 100 ],
         "name": "ExitButton",
         "text": "SALIR",
@@ -23,6 +23,13 @@
             "TaharezLook/ButtonBg"
           ]
         ]
+      }
+    },
+    {
+      "Component": "CloseGame",
+      "Type": "LUA",
+      "Parameters": {
+          
       }
     }
   ]

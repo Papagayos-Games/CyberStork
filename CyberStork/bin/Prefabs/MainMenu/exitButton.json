@@ -24,6 +24,13 @@
           ]
         ]
       }
+    },
+    {
+      "Component": "CloseGame",
+      "Type": "LUA",
+      "Parameters": {
+          
+      }
     }
   ]
 }

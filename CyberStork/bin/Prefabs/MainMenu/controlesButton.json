@@ -26,10 +26,10 @@
       }
     },
     {
-      "Component": "ControlesButton",
+      "Component": "ChangeScene",
       "Type": "LUA",
       "Parameters": {
-
+        "scene": "controls"
       }
     }
   ]

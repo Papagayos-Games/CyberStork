@@ -5,7 +5,7 @@
       "Type": "UI",
       "Parameters": {
         "position": [ 0.33, 0.3 ],
-        "size": [ 533, 100],
+        "size": [ 533, 100 ],
         "name": "ScoreButton",
         "text": "PUNTUACIONES",
         "type": "Button",
@@ -23,6 +23,13 @@
             "TaharezLook/ButtonBg"
           ]
         ]
+      }
+    },
+    {
+      "Component": "ChangeScene",
+      "Type": "LUA",
+      "Parameters": {
+        "scene": "scoreboard"
       }
     }
   ]

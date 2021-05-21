@@ -21,6 +21,7 @@ quiscalus["instantiate"] = function (params, entity)
 end
 
 quiscalus["start"] = function (_self, lua)
+
     _self.pos = lua:getTransform(_self.entity):getPosition()
     _self.rb = lua:getRigidbody(_self.entity)
     _self.lastZ = lua:getTransform(lua:getEntity("defaultCamera")):getPosition().z
@@ -39,12 +40,11 @@ quiscalus["start"] = function (_self, lua)
     end
 
     _self.dir = 1
-
 end
 
 quiscalus["update"] = function (_self, lua)
-    if _self.horizontal == true then
-        local newPos = Vector3(_self.pos.x +(_self.speed * dir), _self.pos.y, _self.pos.z + _self.frontSpeed)
+    if _self.horizontal then
+        local newPos = Vector3(_self.pos.x + (_self.speed * _self.dir), _self.pos.y, _self.pos.z + _self.frontSpeed)
         --si nos salimos de la pantalla
         if newPos.x >= _self.halfWidth or newPos.x <= -(_self.halfWidth) then 
             --cambiamos de direccion
@@ -52,7 +52,7 @@ quiscalus["update"] = function (_self, lua)
         end
         _self.rb:setPosition(newPos)
     else
-        local newPos = Vector3(_self.pos.x , _self.pos.y +(_self.speed * dir), _self.pos.z + _self.frontSpeed)
+        local newPos = Vector3(_self.pos.x , _self.pos.y +(_self.speed * _self.dir), _self.pos.z + _self.frontSpeed)
         --si nos salimos de la pantalla
         if newPos.y >= _self.halfHeight or newPos.y <= -(_self.halfHeight) then 
             --cambiamos de direccion
@@ -63,10 +63,10 @@ quiscalus["update"] = function (_self, lua)
     end
 
 
-      --Si sobrepasamos la posicion de la camara en z
-      if _self.pos.z > _self.lastZ then
+    --Si sobrepasamos la posicion de la camara en z
+    if _self.pos.z > _self.lastZ then
         lua:getCurrentScene():destroyEntity(_self.entity)
-        print("Cuervo destruido XD")
+        print("Quiscalus destruido XD")
     end
 end
 

@@ -24,6 +24,8 @@ spawner["instantiate"] = function (params, entity)
     end
     
     self.entity =  entity
+
+    self.changeTimeToSpawn = function (x) self.timeToSpawn = self.timeToSpawn + x end
     return self
 end
 

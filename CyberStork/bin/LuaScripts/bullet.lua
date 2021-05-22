@@ -7,9 +7,15 @@ bullet["instantiate"] = function (params, entity)
     
     --En segundos el tiempo
     if p.lifetime ~= nil then
-        self.lifetime = p.speed
+        self.lifetime = p.speed-- TO DO esto no seria p.lifetime?
     else
         self.lifetime = 3
+    end
+--la bala guarda el daño que hace
+    if p.damage ~= nil then
+        self.damage = p.damage
+    else
+        self.damage = 1
     end
     
     self.entity =  entity

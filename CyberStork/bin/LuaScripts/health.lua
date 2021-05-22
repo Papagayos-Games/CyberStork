@@ -12,7 +12,10 @@ health["instantiate"] = function (params, entity)
         self.life = 1
     end
 
+    self.getLife = function (x) self.life = self.life + x end
+    
     self.receiveDamage = function (x) self.life = self.life - x end
+
     return self
 end
 

@@ -44,7 +44,7 @@ end
 
 meteor["update"] = function(_self, lua)
   --TO DO: gestion de colisiones con otros objetos y la destruccion cuando supere la z de la camara principal
-
+	
 end
 
 return meteor

@@ -24,7 +24,7 @@ int main() {
 			"TaharezLook.scheme",
 			"DejaVuSans-12.font",
 			"Scenes/scenes.json"
-		);
+		); 
 	}
 	catch (std::exception e) {
 		std::cout << e.what() << "\n";

@@ -4,7 +4,7 @@
       "Component": "Button",
       "Type": "UI",
       "Parameters": {
-        "position": [ 0.25, 0.45 ],
+        "position": [ 0.6, 0.6 ],
         "size": [ 300, 100 ],
         "name": "CreditButton",
         "text": "CREDITOS",
@@ -16,11 +16,11 @@
           ],
           [
             "PushedImage",
-            "TaharezLook/ButtonBg"
+            "TaharezLook/ButtonBgPushed"
           ],
           [
             "HoverImage",
-            "TaharezLook/ButtonBg"
+            "TaharezLook/ButtonBgMouseUp"
           ]
         ]
       }

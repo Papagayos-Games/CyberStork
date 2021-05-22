@@ -4,7 +4,7 @@
       "Component": "Button",
       "Type": "UI",
       "Parameters": {
-        "position": [ 0.25, 0.25 ],
+        "position": [ 0.2, 0.4 ],
         "size": [ 300, 100 ],
         "name": "StartButton",
         "text": "JUGAR",
@@ -16,11 +16,11 @@
           ],
           [
             "PushedImage",
-            "TaharezLook/ButtonBg"
+            "TaharezLook/ButtonBgPushed"
           ],
           [
             "HoverImage",
-            "TaharezLook/ButtonBg"
+            "TaharezLook/ButtonBgMouseUp"
           ]
         ]
       }

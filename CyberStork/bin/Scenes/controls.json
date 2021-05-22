@@ -23,8 +23,8 @@
           "Component": "Image",
           "Type": "UI",
           "Parameters": {
-            "position": [ 0.08, 0.2 ],
-            "size": [ 256, 256],
+            "position": [ 0.125, 0.25 ],
+            "size": [ 320, 320],
             "name": "MouseImage",
             "type": "StaticImage",
             "property": [
@@ -46,17 +46,30 @@
       ]
     },
     {
-      "Name": "TextoControles",
+      "Name": "controlesImage",
       "Components": [
         {
-          "Component": "Label",
+          "Component": "Image",
           "Type": "UI",
           "Parameters": {
-            "position": [ 0.28, 0.2 ],
-            "size": [ 600, 300 ],
-            "name": "Label",
-            "text": "- Movimiento Jugador: Moviendo raton - PowerUp1: click Izq - PowerUp2: click Der",
-            "type": "Label"
+            "position": [ 0.4, 0.25 ],
+            "size": [ 900, 268],
+            "name": "Controles",
+            "type": "StaticImage",
+            "property": [
+              [
+                "Image",
+                "TaharezLook/ControlesImage"
+              ],
+              [
+                "FrameEnabled",
+                "false"
+              ],
+              [
+                "BackgroundEnabled",
+                "false"
+              ]
+            ]
           }
         }
       ]

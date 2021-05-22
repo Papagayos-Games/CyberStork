@@ -1,6 +1,9 @@
 <Imageset autoScaled="true" imagefile="TaharezLook.png" name="TaharezLook" nativeHorzRes="1280" nativeVertRes="720" version="2">
     <Image height="464" name="MenuBg" width="651" xPos="0" yPos="256" />
     <Image height="154" name="ButtonBg" width="257" xPos="512" yPos="0" />
+    <Image height="300" name="MouseBg" width="200" xPos="805" yPos="0" />
+    <Image height="300" name="CreditsBg" width="600" xPos="655" yPos="256" />
+    <Image height="150" name="TitleBg" width="700" xPos="655" yPos="520" />
     <Image height="50" name="GreenArrow" width="40" xPos="432" yPos="206" />
     <Image height="50" name="PebloPuntero" width="40" xPos="472" yPos="206" />
     <Image height="220" name="Peblo" width="155" xPos="256" yPos="0" />

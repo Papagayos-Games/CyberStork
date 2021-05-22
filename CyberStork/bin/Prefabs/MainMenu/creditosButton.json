@@ -4,8 +4,8 @@
       "Component": "Button",
       "Type": "UI",
       "Parameters": {
-        "position": [ 0.33, 0.5 ],
-        "size": [ 533, 100 ],
+        "position": [ 0.25, 0.45 ],
+        "size": [ 300, 100 ],
         "name": "CreditButton",
         "text": "CREDITOS",
         "type": "Button",

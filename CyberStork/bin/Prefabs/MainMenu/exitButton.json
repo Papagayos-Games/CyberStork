@@ -4,8 +4,8 @@
       "Component": "Button",
       "Type": "UI",
       "Parameters": {
-        "position": [ 0.33, 0.9 ],
-        "size": [ 533, 100 ],
+        "position": [ 0.4, 0.65 ],
+        "size": [ 300, 100 ],
         "name": "ExitButton",
         "text": "SALIR",
         "type": "Button",

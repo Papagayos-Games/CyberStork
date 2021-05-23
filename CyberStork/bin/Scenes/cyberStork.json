@@ -17,6 +17,9 @@
         "Prefab" : "DefaultLight"
       },
       {
+        "Prefab": "HUD/LifeIcon"
+      },
+      {
         "Name": "Player",
         "Prefab": "Player"
       },

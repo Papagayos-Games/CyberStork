@@ -1,4 +1,5 @@
 <Imageset autoScaled="true" imagefile="TaharezLook.png" name="TaharezLook" nativeHorzRes="1280" nativeVertRes="720" version="2">
+    <Image height="256" name="LifeIcon" width="256" xPos="1280" yPos="0" />
     <Image height="256" name="ControlesImage" width="768" xPos="0" yPos="768" />
     <Image height="464" name="MenuBg" width="651" xPos="0" yPos="256" />
     <Image height="154" name="ButtonBg" width="257" xPos="512" yPos="0" />

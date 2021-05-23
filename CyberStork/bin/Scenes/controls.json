@@ -16,6 +16,43 @@
     {
       "Prefab": "ControlsMenu/backButton"
     },
+	{
+	  "Name": "startButton",
+	  "Components": [
+		{
+		  "Component": "Button",
+		  "Type": "UI",
+		  "Parameters": {
+			"position": [ 0.25, 0.75 ],
+			"size": [ 300, 100 ],
+			"name": "StartButton",
+			"text": "JUGAR",
+			"type": "Button",
+			"property": [
+			  [
+				"NormalImage",
+				"TaharezLook/ButtonBg"
+			  ],
+			  [
+				"PushedImage",
+				"TaharezLook/ButtonBgPushed"
+			  ],
+			  [
+				"HoverImage",
+				"TaharezLook/ButtonBgMouseUp"
+			  ]
+			]
+		  }
+		},
+		{
+		  "Component": "ChangeScene",
+		  "Type": "LUA",
+		  "Parameters": {
+			  "scene" : "cyberStork"
+		  }
+		}
+	  ]
+	},
     {
       "Name": "mouseImage",
       "Components": [

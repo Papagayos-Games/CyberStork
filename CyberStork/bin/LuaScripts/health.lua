@@ -12,7 +12,12 @@ health["instantiate"] = function (params, entity)
         self.life = 1
     end
 
-    self.getLife = function (x) self.life = self.life + x end
+    self.getLife = function 
+        (x) self.life = self.life + x
+        print("aumenta vida")
+        print(self.life)
+    
+    end
     
     self.receiveDamage = function (x, lua)
         print("recivido damage")

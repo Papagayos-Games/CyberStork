@@ -21,15 +21,19 @@
         "Prefab": "Player"
       },
       {
+        "Name": "Cuervo",
         "Prefab": "cuervo",
         "Components" : [
           {
             "Component": "Transform",
             "Type": "Common",
             "Parameters" : {
-              "position" : [0,0,-500]
+              "position" : [0,0,-1000]
             }
           }
+         
+      
+          
         ]
       }
     ]

@@ -28,6 +28,8 @@
           "restitution": 0.1,
           "linealVel": [ 0.0, 0.0, 0.0 ],
           "friction": 0.5,
+          "group":2,
+          "mask":5,
           "state": "None",
           "shape": {
             "id": "Box"

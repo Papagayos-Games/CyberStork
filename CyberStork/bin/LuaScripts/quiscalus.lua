@@ -79,7 +79,7 @@ quiscalus["onCollisionEnter"] = function(_self, lua, otherRb)
     print("cojemos el grupo al que pertenece" )
     if group == 1 then-- si colisiona con el player
         local healthComponent = lua:getLuaSelf(otherRb,"health")
-        if healthComponent.receiveDamage(_self.damage) then
+        if healthComponent.receiveDamage(_self.damage) == true then
             lua:changeScene("mainMenu")--TO DO poner nombre de la escena game over
         end 
         --se destruye el cuervo
@@ -94,6 +94,7 @@ quiscalus["onCollisionEnter"] = function(_self, lua, otherRb)
         --destruimos la bala 
         lua:getCurrentScene():destroyEntity(otherRb)
         print("destruida bala al colisionar")
+    end
 
     end
 

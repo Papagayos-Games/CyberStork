@@ -29,6 +29,8 @@
           "restitution": 0.5,
           "linealVel": [ 0.0, 0.0, -100.0 ],
           "friction": 0.5,
+          "group":4,
+          "mask":18,
           "state": "None",
           "shape": {
             "id": "Box"

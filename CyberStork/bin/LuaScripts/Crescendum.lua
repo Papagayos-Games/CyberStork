@@ -6,13 +6,13 @@ Crescendum["instantiate"] = function (params, entity)
     local self = {}
     self.entity = entity
 
-    if p.spawntime ~= nil then
-        self.spawntime = p.life
+    if p.life ~= nil then
+        self.life = p.life
     else
-        self.spawntime = 2
+        self.life = 2
     end
     if p.time ~= nil then
-        self.time = p.life
+        self.time = p.time
     else
         self.time = 5
     end
@@ -45,11 +45,14 @@ Crescendum["onCollisionEnter"] = function(_self, lua, otherRb)
    local group = lua:getRigidbody(otherRb):getGroup()
    print("cojemos el grupo al que pertenece" )
    if group == 1 then-- si colisiona con el player
+    print("colisiona con el jugador")
        local spawnComponent = lua:getLuaSelf(otherRb,"spawner")
+       print("")
        spawnComponent.changeTimeToSpawn(_self.life, _self.time)
        --se destruye el el powerup
        lua:getCurrentScene():destroyEntity(_self.entity)
        print("destruido crescendum al colisionar con el player")
+   end
 
    end
 

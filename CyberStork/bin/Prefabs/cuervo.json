@@ -47,6 +47,15 @@
         "Type": "LUA",
         "Parameters":{
         }
+      },
+      {
+        "Component": "spawner",
+        "Type": "LUA",
+        "Parameters":{
+         "spawnObject":"EnemyBullet",
+         "timeToSpawn": 3
+
+        }
       }
   ]
 }

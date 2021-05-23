@@ -3,7 +3,7 @@ local spawner = {}
 
 local function createfunc (_self, lua, object) 
     local pos = lua:getTransform(_self.entity):getPosition()
-    lua:getTransform(object):setPosition(Vector3(pos.x, pos.y, pos.z - 100))
+    lua:getTransform(object):setPosition(Vector3(pos.x, pos.y, pos.z - 100)) --TO DO el -100 por parametros
 end
 
 spawner["instantiate"] = function (params, entity)

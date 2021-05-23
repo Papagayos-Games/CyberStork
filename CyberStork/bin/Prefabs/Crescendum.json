@@ -27,8 +27,10 @@
           "dampingAng": 0,
           "gravity": [ 0.0, 0.0, 0.0 ],
           "restitution": 0.5,
-          "linealVel": [ 0.0, 0.0, 70.0 ],
+          "linealVel": [ 0.0, 0.0, 150.0 ],
           "friction": 0.5,
+          "group":8,
+          "mask":1,
           "state": "None",
           "shape": {
             "id": "Box"

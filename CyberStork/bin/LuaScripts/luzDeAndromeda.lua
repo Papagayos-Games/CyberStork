@@ -46,5 +46,6 @@ luzDeAndromeda["onCollisionEnter"] = function(_self, lua, otherRb)
         print("destruido andromeda al colisionar con el player")
 
     end
+end
 
 return luzDeAndromeda

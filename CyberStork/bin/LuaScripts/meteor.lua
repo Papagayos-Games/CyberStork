@@ -14,6 +14,12 @@ meteor["instantiate"] = function(params, entity)
     self.speed = 1000
   end
 
+  if p.damage ~= nil then
+    self.damage = p.damage
+  else
+    self.damage = 1
+  end
+
   self.entity = entity
   return self
 end
@@ -44,6 +50,31 @@ end
 
 meteor["update"] = function(_self, lua)
   --TO DO: gestion de colisiones con otros objetos y la destruccion cuando supere la z de la camara principal
+
+end
+
+meteor["onCollisionEnter"] = function(_self, lua, otherRb)
+  print("en el oncolision enter cuervo")
+
+  --TO DO :sumar puntos
+
+  local group = lua:getRigidbody(otherRb):getGroup()
+  print("cojemos el grupo al que pertenece" )
+  if group == 1 then-- si colisiona con el player
+      local healthComponent = lua:getLuaSelf(otherRb,"health")
+      healthComponent.receiveDamage(_self.damage)
+      --se destruye el cuervo
+      lua:getCurrentScene():destroyEntity(_self.entity)
+      print("destruido cuervo al colisionar con el player")
+
+  elseif group == 4 then-- si colisiona con las balas del jugador
+      --destruimos la bala 
+      lua:getCurrentScene():destroyEntity(otherRb)
+      lua:getCurrentScene():destroyEntity(_self.entity)
+      print("destruida bala  y meteorito al colisionar")
+
+  end
+
 
 end
 

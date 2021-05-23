@@ -33,4 +33,27 @@ bullet["update"] = function (_self, lua)
     end 
 end
 
+bullet["onCollisionEnter"] = function(_self, lua, otherRb)
+    --si choca con el jugador aumentara la vida de este en _self.life puntos
+   print("en el oncolision enter Andromeda")
+
+   local group = lua:getRigidbody(otherRb):getGroup()
+   print("cojemos el grupo al que pertenece" )
+   if group == 16 or group == 4 then-- si colisiona con otra bala
+       --se destruye el la bala
+       lua:getCurrentScene():destroyEntity(_self.entity)
+       print("destruido bala al colisionar con bala")
+
+   elseif group == 1 then-- si colisiona con el player
+    local healthComponent = lua:getLuaSelf(otherRb,"health")
+    if healthComponent.receiveDamage(_self.damage) then
+        lua:changeScene("mainMenu")--TO DO poner nombre de la escena game over
+    end 
+    --se destruye la bala
+    lua:getCurrentScene():destroyEntity(_self.entity)
+    print("destruido la bala al colisionar con el player")
+
+   end
+
 return bullet
+

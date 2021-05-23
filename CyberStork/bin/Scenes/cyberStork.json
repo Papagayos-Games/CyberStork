@@ -42,6 +42,15 @@
             }
           }
         ]
+      },
+	  {
+        "Name": "gameManager",
+        "Components" : [
+			{
+				"Component": "score",
+				"Type": "LUA"
+			}
+        ]
       }
     ]
 }

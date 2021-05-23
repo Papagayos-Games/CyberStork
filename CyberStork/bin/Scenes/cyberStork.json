@@ -1,56 +1,50 @@
 {
-    "Entities": [
-      {
-        "Name": "defaultCamera",
-        "Prefab" : "DefaultCamera",
-        "Components" : [
-          {
-            "Component": "Transform",
-            "Type": "Common",
-            "Parameters" : {
-              "position" : [0,0,500]
-            }
+  "Entities": [
+    {
+      "Name": "defaultCamera",
+      "Prefab" : "DefaultCamera",
+      "Components" : [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters" : {
+            "position" : [0,0,500]
           }
-        ]
-      },
-      {
-        "Prefab" : "DefaultLight"
-      },
-      {
-        "Prefab": "HUD/LifeIcon"
-      },
-      {
-        "Name": "Player",
-        "Prefab": "Player"
-      },
-      {
-        "Name": "meteorSpawner",
-        "Components":[
-          {
-            "Component": "Transform",
-            "Type": "Common",
-            "Parameters" : {
-              "position" : [0,0,-1500]
-            }
-          }, 
-          {
-            "Component": "spawner",
-            "Type": "LUA",
-            "Parameters":{
-              "spawnObject" : "meteor",
-              "timeToSpawn": 4
-            }
+        }
+      ]
+    },
+    {
+      "Prefab" : "DefaultLight"
+    },
+    {
+      "Prefab": "HUD/LifeIcon"
+    },
+    {
+      "Name": "Player",
+      "Prefab": "Player"
+    },
+    {
+      "Name": "meteorSpawner",
+      "Components":[
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters" : {
+            "position" : [0,0,-1500]
           }
-        ]
-      },
-	  {
-        "Name": "gameManager",
-        "Components" : [
-			{
-				"Component": "score",
-				"Type": "LUA"
-			}
-        ]
-      }
-    ]
+        }, 
+        {
+          "Component": "spawner",
+          "Type": "LUA",
+          "Parameters":{
+            "spawnObject" : "meteor",
+            "timeToSpawn": 4
+          }
+        }
+      ]
+    },
+    {
+      "Prefab": "gameManager"
+    }
+  ]
 }

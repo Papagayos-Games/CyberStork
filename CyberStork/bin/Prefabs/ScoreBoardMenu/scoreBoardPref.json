@@ -1,0 +1,33 @@
+{
+    "Components": [
+      {
+        "Component": "Button",
+        "Type": "UI",
+        "Parameters": {
+          "position": [ 0.33, 0.2 ],
+          "size": [ 533, 300 ],
+          "name": "Table",
+          "text": "",
+          "type": "Button",
+          "property": [
+            [
+              "NormalImage",
+              "TaharezLook/ButtonBg"
+            ],
+            [
+              "PushedImage",
+              "TaharezLook/ButtonBgPushed"
+            ],
+            [
+              "HoverImage",
+              "TaharezLook/ButtonBgMouseUp"
+            ]
+          ]
+        }
+      },
+      {
+        "Component": "setScoreText",
+        "Type": "LUA"
+      }
+    ]
+}

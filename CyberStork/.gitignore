@@ -23,6 +23,7 @@
 *.iobj
 *.pdb
 *.ipdb
+*.idb
 *.ilk
 
 # Precompiled Headers

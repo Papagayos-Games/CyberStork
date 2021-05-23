@@ -14,7 +14,13 @@
       ]
     },
     {
+      "Prefab": "gameManager"
+    },
+    {
+      "Prefab": "ScoreBoardMenu/scoreBoardPref"
+    },
+    {
       "Prefab": "ScoreBoardMenu/backButton"
-    }    
+    }
   ]
 }

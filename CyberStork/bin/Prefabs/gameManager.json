@@ -1,0 +1,12 @@
+{
+    "Name": "gameManager",
+    "Components" : [
+        {
+            "Component": "score",
+            "Type": "LUA",
+            "Parameters":{
+                "maxScores" : 10
+            }
+        }
+    ]
+}

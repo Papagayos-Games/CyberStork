@@ -2,22 +2,32 @@
   "Entities": [
     {
       "Name": "defaultCamera",
-      "Prefab" : "DefaultCamera",
-      "Components" : [
+      "Prefab": "DefaultCamera",
+      "Components": [
         {
           "Component": "Transform",
           "Type": "Common",
-          "Parameters" : {
-            "position" : [0,0,500]
+          "Parameters": {
+            "position": [
+              0,
+              0,
+              500
+            ]
           }
         }
       ]
     },
     {
-      "Prefab" : "DefaultLight"
+      "Prefab": "DefaultLight"
+    },
+    {
+      "Prefab": "gameManager"
     },
     {
       "Prefab": "HUD/LifeIcon"
+    },
+    {
+      "Prefab": "HUD/actualScore"
     },
     {
       "Name": "Player",
@@ -25,26 +35,27 @@
     },
     {
       "Name": "meteorSpawner",
-      "Components":[
+      "Components": [
         {
           "Component": "Transform",
           "Type": "Common",
-          "Parameters" : {
-            "position" : [0,0,-1500]
+          "Parameters": {
+            "position": [
+              0,
+              0,
+              -1500
+            ]
           }
-        }, 
+        },
         {
           "Component": "spawner",
           "Type": "LUA",
-          "Parameters":{
-            "spawnObject" : "meteor",
+          "Parameters": {
+            "spawnObject": "meteor",
             "timeToSpawn": 4
           }
         }
       ]
-    },
-    {
-      "Prefab": "gameManager"
     }
   ]
 }

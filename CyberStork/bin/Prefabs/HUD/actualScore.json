@@ -1,0 +1,40 @@
+{
+    "Name": "ScorePanel",
+    "Components": [
+        {
+            "Component": "Button",
+            "Type": "UI",
+            "Parameters": {
+                "position": [
+                    0.85,
+                    0.03
+                ],
+                "size": [
+                    150,
+                    100
+                ],
+                "name": "ActualScore",
+                "text": "",
+                "type": "Button",
+                "property": [
+                    [
+                        "NormalImage",
+                        "TaharezLook/ScoreGameOver"
+                    ],
+                    [
+                        "PushedImage",
+                        "TaharezLook/ScoreGameOver"
+                    ],
+                    [
+                        "HoverImage",
+                        "TaharezLook/ScoreGameOver"
+                    ]
+                ]
+            }
+        },
+        {
+            "Component": "showScore",
+            "Type": "LUA"
+        }
+    ]
+}

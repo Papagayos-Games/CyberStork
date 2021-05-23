@@ -12,15 +12,15 @@
           "property": [
             [
               "NormalImage",
-              "TaharezLook/ButtonBg"
+              "TaharezLook/ScorePanelMenu"
             ],
             [
               "PushedImage",
-              "TaharezLook/ButtonBgPushed"
+              "TaharezLook/ScorePanelMenu"
             ],
             [
               "HoverImage",
-              "TaharezLook/ButtonBgMouseUp"
+              "TaharezLook/ScorePanelMenu"
             ]
           ]
         }

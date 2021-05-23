@@ -23,6 +23,7 @@ UIclase["start"] = function (_self, lua)
     for key, value in pairs(s.getScores(s)) do -- actualcode
         text = text .. value .. "\n"
     end
+    
     _self.button:setText(text)
 end
 

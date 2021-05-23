@@ -53,7 +53,6 @@ score["instantiate"] = function(params, entity)
 
     self.setActualScore = function(s, score)
         s.actualScore = score
-        print(s.actualScore)
     end
 
     self.getScores = function(s)

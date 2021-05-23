@@ -14,7 +14,16 @@ health["instantiate"] = function (params, entity)
 
     self.getLife = function (x) self.life = self.life + x end
     
-    self.receiveDamage = function (x) self.life = self.life - x end
+    self.receiveDamage = function (x, lua)
+        print("recivido damage")
+         self.life = self.life - x
+         print(self.life)
+        if self.life <= 0 then
+            print("vida menor que 0")
+            lua:getCurrentScene():destroyEntity(self.entity)
+            print("entidad destruida")
+        end
+     end
 
     return self
 end
@@ -24,9 +33,9 @@ end
 
 health["update"] = function (_self, lua)
 
-    if _self.life <= 0 then
-        lua:getCurrentScene():destroyEntity(_self.entity)
-    end
+   -- if _self.life <= 0 then
+    --    lua:getCurrentScene():destroyEntity(_self.entity)
+   -- end
 end
 
 return health

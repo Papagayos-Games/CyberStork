@@ -7,7 +7,7 @@ bullet["instantiate"] = function (params, entity)
     
     --En segundos el tiempo
     if p.lifetime ~= nil then
-        self.lifetime = p.speed-- TO DO esto no seria p.lifetime?
+        self.lifetime = p.lifetime
     else
         self.lifetime = 3
     end

@@ -9,13 +9,20 @@ cuervo["instantiate"] = function (params, entity)
     if p.speed ~= nil then
         self.speed = p.speed
     else
-        self.speed = 3
+        self.speed = 2
     end
 
     if p.frontSpeed ~= nil then
         self.frontSpeed = p.frontSpeed
     else
         self.frontSpeed = 1.2
+    end
+
+    --el cuervo guarda el daño que hace
+    if p.damage ~= nil then
+        self.damage = p.damage
+    else
+        self.damage = 1
     end
 
     return self
@@ -47,5 +54,34 @@ cuervo["update"] = function (_self, lua)
         print("Cuervo destruido XD")
     end
 end
+
+cuervo["onCollisionEnter"] = function(_self, lua, otherRb)
+    print("en el oncolision enter cuervo")
+
+    --TO DO :sumar puntos
+
+    local group = lua:getRigidbody(otherRb):getGroup()
+    print("cojemos el grupo al que pertenece" )
+    if group == 1 then-- si colisiona con el player
+        local healthComponent = lua:getLuaSelf(otherRb,"health")
+        healthComponent.receiveDamage(_self.damage)
+        --se destruye el cuervo
+        lua:getCurrentScene():destroyEntity(_self.entity)
+        print("destruido cuervo al colisionar con el player")
+
+    elseif group == 4 then-- si colisiona con las balas del jugador
+        local healthComponent = lua:getLuaSelf(_self.entity,"health")
+        local bulletcomponent = lua:getLuaSelf(otherRb,"bullet")
+        --añadimos daño
+        healthComponent.receiveDamage(bulletcomponent.damage, lua)
+        --destruimos la bala 
+        lua:getCurrentScene():destroyEntity(otherRb)
+        print("destruida bala al colisionar")
+
+    end
+
+
+end
+
 
 return cuervo

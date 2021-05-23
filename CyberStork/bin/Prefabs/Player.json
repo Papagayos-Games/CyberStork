@@ -50,5 +50,24 @@
           "timeToSpawn": 1.5
         }
       }
+      ,
+      {
+        "Component": "spawner",
+        "Type": "LUA",
+        "Parameters": {
+          "spawnObject" : "bullet",
+          "timeToSpawn": 1.5
+        }
+      }
+      ,
+      {
+        "Component": "health",
+        "Type": "LUA",
+        "Parameters": {
+          "life" : 30
+        }
+      }
+      
+
   ]
 }

@@ -30,8 +30,21 @@ luzDeAndromeda["update"] = function (_self, lua)
         print("luzDeAndromeda destruido XD")
     end
 
-    --OnColision enter
-    --si choca con el jugador aumentara la vida de este en _self.life puntos
+   
 end
+luzDeAndromeda["onCollisionEnter"] = function(_self, lua, otherRb)
+     --si choca con el jugador aumentara la vida de este en _self.life puntos
+    print("en el oncolision enter Andromeda")
 
-return quiscalus
+    local group = lua:getRigidbody(otherRb):getGroup()
+    print("cojemos el grupo al que pertenece" )
+    if group == 1 then-- si colisiona con el player
+        local healthComponent = lua:getLuaSelf(otherRb,"health")
+        healthComponent.getLife(_self.life)
+        --se destruye el el powerup
+        lua:getCurrentScene():destroyEntity(_self.entity)
+        print("destruido andromeda al colisionar con el player")
+
+    end
+
+return luzDeAndromeda

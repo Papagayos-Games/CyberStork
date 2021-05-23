@@ -70,4 +70,29 @@ quiscalus["update"] = function (_self, lua)
     end
 end
 
+quiscalus["onCollisionEnter"] = function(_self, lua, otherRb)
+    print("en el oncolision enter quiscalus")
+
+    --TO DO :sumar puntos
+
+    local group = lua:getRigidbody(otherRb):getGroup()
+    print("cojemos el grupo al que pertenece" )
+    if group == 1 then-- si colisiona con el player
+        local healthComponent = lua:getLuaSelf(otherRb,"health")
+        healthComponent.receiveDamage(_self.damage)
+        --se destruye el cuervo
+        lua:getCurrentScene():destroyEntity(_self.entity)
+        print("destruido quiscalus al colisionar con el player")
+
+    elseif group == 4 then-- si colisiona con las balas del jugador
+        local healthComponent = lua:getLuaSelf(_self.entity,"health")
+        local bulletcomponent = lua:getLuaSelf(otherRb,"bullet")
+        --añadimos daño
+        healthComponent.receiveDamage(bulletcomponent.damage, lua)
+        --destruimos la bala 
+        lua:getCurrentScene():destroyEntity(otherRb)
+        print("destruida bala al colisionar")
+
+    end
+
 return quiscalus

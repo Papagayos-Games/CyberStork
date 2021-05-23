@@ -22,10 +22,16 @@ spawner["instantiate"] = function (params, entity)
     else
         self.timeToSpawn = 1.5
     end
-    
-    self.entity =  entity
 
-    self.changeTimeToSpawn = function (x) self.timeToSpawn = self.timeToSpawn + x end
+    self.entity =  entity
+    self.previousTime = self.timeToSpawn
+    self.time = -1
+
+    self.changeTimeToSpawn = function (x, time) 
+        self.previousTime = self.timeToSpawn
+        self.timeToSpawn = x
+        self.time = time
+     end
     return self
 end
 
@@ -33,7 +39,7 @@ spawner["start"] = function (_self, lua)
     _self.timeSinceSpawn = lua:getInputManager():getTicks()
 end
 
-spawner["update"] = function (_self, lua)
+spawner["update"] = function (_self, lua, deltaTime)
     if (lua:getInputManager():getTicks() - _self.timeSinceSpawn)/1000  >= _self.timeToSpawn then
         print(_self.spawnObject)
         local objectSpawned = lua:instantiate(_self.spawnObject)
@@ -42,6 +48,13 @@ spawner["update"] = function (_self, lua)
         objectSpawned:start();
         _self.timeSinceSpawn = lua:getInputManager():getTicks()
     end 
+
+    if _self.time > 0 then
+        _self.time = _self.time - deltaTime
+    else 
+        _self.timeToSpawn = _self.previousTime
+
+    end
 end
 
 return spawner

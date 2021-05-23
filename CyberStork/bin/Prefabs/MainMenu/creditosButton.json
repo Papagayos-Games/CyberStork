@@ -7,20 +7,20 @@
         "position": [ 0.6, 0.6 ],
         "size": [ 300, 100 ],
         "name": "CreditButton",
-        "text": "CREDITOS",
+        "text": "",
         "type": "Button",
         "property": [
           [
             "NormalImage",
-            "TaharezLook/ButtonBg"
+            "TaharezLook/CreditosNormalButton"
           ],
           [
             "PushedImage",
-            "TaharezLook/ButtonBgPushed"
+            "TaharezLook/CreditosPushButton"
           ],
           [
             "HoverImage",
-            "TaharezLook/ButtonBgMouseUp"
+            "TaharezLook/CreditosHoverButton"
           ]
         ]
       }

@@ -7,20 +7,20 @@
         "position": [ 0.4, 0.8 ],
         "size": [ 300, 100 ],
         "name": "ExitButton",
-        "text": "SALIR",
+        "text": "",
         "type": "Button",
         "property": [
           [
             "NormalImage",
-            "TaharezLook/ButtonBg"
+            "TaharezLook/SalirNormalButton"
           ],
           [
             "PushedImage",
-            "TaharezLook/ButtonBgPushed"
+            "TaharezLook/SalirPushButton"
           ],
           [
             "HoverImage",
-            "TaharezLook/ButtonBgMouseUp"
+            "TaharezLook/SalirHoverButton"
           ]
         ]
       }

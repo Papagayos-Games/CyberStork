@@ -1,0 +1,115 @@
+{
+  "Entities": [
+    {
+      "Name": "defaultCamera",
+      "Prefab": "DefaultCamera",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [ 0, 0, 500 ]
+          }
+        }
+      ]
+    },
+    {
+      "Prefab": "ControlsMenu/backButton"
+    },
+	{
+	  "Name": "startButton",
+	  "Components": [
+		{
+		  "Component": "Button",
+		  "Type": "UI",
+		  "Parameters": {
+			"position": [ 0.25, 0.75 ],
+			"size": [ 300, 100 ],
+			"name": "StartButton",
+			"text": "JUGAR",
+			"type": "Button",
+			"property": [
+			  [
+				"NormalImage",
+				"TaharezLook/ButtonBg"
+			  ],
+			  [
+				"PushedImage",
+				"TaharezLook/ButtonBgPushed"
+			  ],
+			  [
+				"HoverImage",
+				"TaharezLook/ButtonBgMouseUp"
+			  ]
+			]
+		  }
+		},
+		{
+		  "Component": "ChangeScene",
+		  "Type": "LUA",
+		  "Parameters": {
+			  "scene" : "cyberStork"
+		  }
+		}
+	  ]
+	},
+    {
+      "Name": "mouseImage",
+      "Components": [
+        {
+          "Component": "Image",
+          "Type": "UI",
+          "Parameters": {
+            "position": [ 0.125, 0.25 ],
+            "size": [ 320, 320],
+            "name": "MouseImage",
+            "type": "StaticImage",
+            "property": [
+              [
+                "Image",
+                "TaharezLook/MouseBg"
+              ],
+              [
+                "FrameEnabled",
+                "false"
+              ],
+              [
+                "BackgroundEnabled",
+                "false"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Name": "controlesImage",
+      "Components": [
+        {
+          "Component": "Image",
+          "Type": "UI",
+          "Parameters": {
+            "position": [ 0.4, 0.25 ],
+            "size": [ 900, 268],
+            "name": "Controles",
+            "type": "StaticImage",
+            "property": [
+              [
+                "Image",
+                "TaharezLook/ControlesImage"
+              ],
+              [
+                "FrameEnabled",
+                "false"
+              ],
+              [
+                "BackgroundEnabled",
+                "false"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

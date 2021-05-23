@@ -7,20 +7,20 @@
         "position": [ 0.2, 0.4 ],
         "size": [ 300, 100 ],
         "name": "StartButton",
-        "text": "JUGAR",
+        "text": "",
         "type": "Button",
         "property": [
           [
             "NormalImage",
-            "TaharezLook/ButtonBg"
+            "TaharezLook/PlayNormalButton"
           ],
           [
             "PushedImage",
-            "TaharezLook/ButtonBgPushed"
+            "TaharezLook/PlayPushButton"
           ],
           [
             "HoverImage",
-            "TaharezLook/ButtonBgMouseUp"
+            "TaharezLook/PlayHoverButton"
           ]
         ]
       }

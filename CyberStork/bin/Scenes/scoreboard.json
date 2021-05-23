@@ -21,6 +21,35 @@
     },
     {
       "Prefab": "ScoreBoardMenu/backButton"
+    },
+    {
+      "Name": "highScoreImage",
+      "Components": [
+        {
+          "Component": "Image",
+          "Type": "UI",
+          "Parameters": {
+            "position": [ 0.4, 0.1 ],
+            "size": [ 400, 100 ],
+            "name": "HighScoreImage",
+            "type": "StaticImage",
+            "property": [
+              [
+                "Image",
+                "TaharezLook/HighScores"
+              ],
+              [
+                "FrameEnabled",
+                "false"
+              ],
+              [
+                "BackgroundEnabled",
+                "false"
+              ]
+            ]
+          }
+        }
+      ]
     }
   ]
 }

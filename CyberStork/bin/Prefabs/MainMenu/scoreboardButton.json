@@ -7,20 +7,20 @@
         "position": [ 0.2, 0.6 ],
         "size": [ 300, 100 ],
         "name": "ScoreButton",
-        "text": "PUNTUACIONES",
+        "text": "",
         "type": "Button",
         "property": [
           [
             "NormalImage",
-            "TaharezLook/ButtonBg"
+            "TaharezLook/PuntuacionesNormalButton"
           ],
           [
             "PushedImage",
-            "TaharezLook/ButtonBgPushed"
+            "TaharezLook/PuntuacionesPushButton"
           ],
           [
             "HoverImage",
-            "TaharezLook/ButtonBgMouseUp"
+            "TaharezLook/PuntuacionesHoverButton"
           ]
         ]
       }

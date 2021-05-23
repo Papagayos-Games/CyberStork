@@ -7,20 +7,20 @@
         "position": [ 0.6, 0.4 ],
         "size": [ 300, 100 ],
         "name": "ControlesButton",
-        "text": "CONTROLES",
+        "text": "",
         "type": "Button",
         "property": [
           [
             "NormalImage",
-            "TaharezLook/ButtonBg"
+            "TaharezLook/ControlesNormalButton"
           ],
           [
             "PushedImage",
-            "TaharezLook/ButtonBgPushed"
+            "TaharezLook/ControlesPushButton"
           ],
           [
             "HoverImage",
-            "TaharezLook/ButtonBgMouseUp"
+            "TaharezLook/ControlesHoverButton"
           ]
         ]
       }

@@ -62,7 +62,9 @@ meteor["onCollisionEnter"] = function(_self, lua, otherRb)
   print("cojemos el grupo al que pertenece" )
   if group == 1 then-- si colisiona con el player
       local healthComponent = lua:getLuaSelf(otherRb,"health")
-      healthComponent.receiveDamage(_self.damage)
+      if healthComponent.receiveDamage(_self.damage) then
+        lua:changeScene("mainMenu")--TO DO poner nombre de la escena game over
+    end 
       --se destruye el cuervo
       lua:getCurrentScene():destroyEntity(_self.entity)
       print("destruido cuervo al colisionar con el player")

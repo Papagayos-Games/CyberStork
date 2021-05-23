@@ -17,14 +17,13 @@ UIclase["instantiate"] = function (params, entity)
 end
 
 UIclase["start"] = function (_self, lua)
-    _self.label = lua:getUIButton(_self.entity)
+    _self.button = lua:getUIButton(_self.entity)
     local s = lua:getLuaSelf(lua:getEntity("gameManager"), "score")
     local text = ""
-    print(s.getAcutalScore(s))
     for key, value in pairs(s.getScores(s)) do -- actualcode
         text = text .. value .. "\n"
     end
-    _self.label:setText(text)
+    _self.button:setText(text)
 end
 
 UIclase["update"] = function (_self, lua) end

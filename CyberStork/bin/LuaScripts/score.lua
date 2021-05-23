@@ -47,11 +47,11 @@ score["instantiate"] = function(params, entity)
         print("[" .. key .. "] " .. value)
     end
 
-    self.getAcutalScore = function(s)
+    self.getActualScore = function(s)
         return s.actualScore
     end
 
-    self.setAcutalScore = function(s, score)
+    self.setActualScore = function(s, score)
         s.actualScore = score
         print(s.actualScore)
     end

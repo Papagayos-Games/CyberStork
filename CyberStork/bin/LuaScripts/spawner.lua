@@ -1,9 +1,9 @@
 local JSON = assert(loadfile "LuaScripts/json.lua")()
 local spawner = {}
 
-local function createfunc (_self, lua, object) 
+local function createfunc (_self, lua, object,offset) 
     local pos = lua:getTransform(_self.entity):getPosition()
-    lua:getTransform(object):setPosition(Vector3(pos.x, pos.y, pos.z - 100)) --TO DO el -100 por parametros
+    lua:getTransform(object):setPosition(Vector3(pos.x, pos.y, pos.z + offset)) 
 end
 
 spawner["instantiate"] = function (params, entity)
@@ -21,6 +21,13 @@ spawner["instantiate"] = function (params, entity)
         self.timeToSpawn = p.timeToSpawn
     else
         self.timeToSpawn = 1.5
+    end
+
+      --indice de la posicion de spawneo 
+      if p.offset ~= nil then
+        self.offset = p.offset
+    else
+        self.offset = -100
     end
 
     self.entity =  entity
@@ -43,7 +50,7 @@ spawner["update"] = function (_self, lua, deltaTime)
     if (lua:getInputManager():getTicks() - _self.timeSinceSpawn)/1000  >= _self.timeToSpawn then
         print(_self.spawnObject)
         local objectSpawned = lua:instantiate(_self.spawnObject)
-        createfunc(_self,lua, objectSpawned)
+        createfunc(_self,lua, objectSpawned, _self.offset)
 
         objectSpawned:start();
         _self.timeSinceSpawn = lua:getInputManager():getTicks()

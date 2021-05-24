@@ -21,9 +21,19 @@
         "Prefab": "Player"
       },
       {
-        "Name": "Cuervo",
-        "Prefab": "cuervo",
+        "Name": "Spawner",
         "Components" : [
+          {
+            "Component": "spawner",
+            "Type": "LUA",
+            "Parameters":{
+             "spawnObject":"Crescendum",
+             "timeToSpawn": 3,
+             "offset":0
+    
+            }
+            
+          },
           {
             "Component": "Transform",
             "Type": "Common",

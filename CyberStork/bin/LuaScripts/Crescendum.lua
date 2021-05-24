@@ -25,6 +25,15 @@ Crescendum["start"] = function (_self, lua)
     _self.pos = lua:getTransform(_self.entity):getPosition()
     _self.rb = lua:getRigidbody(_self.entity)
     _self.lastZ = lua:getTransform(lua:getEntity("defaultCamera")):getPosition().z
+
+      --Dimensiones del la ventana
+  local halfWidth = (lua:getOgreContext():getWindowWidth()/2)
+  local halfHeight = (lua:getOgreContext():getWindowHeight()/2)
+
+  local newX = math.random(-halfWidth+200, halfWidth-200)
+  local newY = math.random(-halfHeight+200, halfHeight-200)
+
+  _self.rb:setPosition(Vector3(newX, newY, _self.pos.z))
    
 end
 

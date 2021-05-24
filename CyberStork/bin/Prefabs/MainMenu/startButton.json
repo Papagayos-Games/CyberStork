@@ -29,7 +29,7 @@
       "Component": "ChangeScene",
       "Type": "LUA",
       "Parameters": {
-          "scene" : "cyberStork"
+        "scene": "cyberStork"
       }
     }
   ]

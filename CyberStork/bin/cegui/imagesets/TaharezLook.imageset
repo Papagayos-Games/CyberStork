@@ -26,9 +26,13 @@
     <Image height="154" name="VolverHoverButton" width="256" xPos="1280" yPos="768" />
     <Image height="154" name="VolverPushButton" width="256" xPos="1536" yPos="768" />
 
+    <Image height="154" name="MenuNormalButton" width="256" xPos="512" yPos="1024" />
+    <Image height="154" name="MenuHoverButton" width="256" xPos="768" yPos="1024" />
+    <Image height="154" name="MenuPushButton" width="256" xPos="1024" yPos="1024" />
+
     <Image height="128" name="HighScores" width="512" xPos="768" yPos="640" />
 
-    <Image height="68" name="GameOver" width="512" xPos="1792" yPos="0" />
+    <Image height="128" name="GameOver" width="512" xPos="1792" yPos="0" />
 
     <Image height="256" name="DeathPingu" width="512" xPos="1792" yPos="256" />
 

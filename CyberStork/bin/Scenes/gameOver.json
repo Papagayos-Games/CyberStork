@@ -14,60 +14,26 @@
       ]
     },
     {
-      "Prefab": "ControlsMenu/backButton"
+      "Prefab": "GameOverMenu/backPlayButton"
     },
-	{
-	  "Name": "startButton",
-	  "Components": [
-		{
-		  "Component": "Button",
-		  "Type": "UI",
-		  "Parameters": {
-			"position": [ 0.25, 0.75 ],
-			"size": [ 300, 100 ],
-			"name": "StartButton",
-			"text": "JUGAR",
-			"type": "Button",
-			"property": [
-			  [
-				"NormalImage",
-				"TaharezLook/ButtonBg"
-			  ],
-			  [
-				"PushedImage",
-				"TaharezLook/ButtonBgPushed"
-			  ],
-			  [
-				"HoverImage",
-				"TaharezLook/ButtonBgMouseUp"
-			  ]
-			]
-		  }
-		},
-		{
-		  "Component": "ChangeScene",
-		  "Type": "LUA",
-		  "Parameters": {
-			  "scene" : "cyberStork"
-		  }
-		}
-	  ]
-	},
     {
-      "Name": "mouseImage",
+      "Prefab": "GameOverMenu/backMenuButton"
+    },
+    {
+      "Name": "gameOverImage",
       "Components": [
         {
           "Component": "Image",
           "Type": "UI",
           "Parameters": {
-            "position": [ 0.125, 0.25 ],
-            "size": [ 320, 320],
-            "name": "MouseImage",
+            "position": [ 0.3, 0.1 ],
+            "size": [ 640, 180 ],
+            "name": "GameOverImage",
             "type": "StaticImage",
             "property": [
               [
                 "Image",
-                "TaharezLook/MouseBg"
+                "TaharezLook/GameOver"
               ],
               [
                 "FrameEnabled",
@@ -83,20 +49,49 @@
       ]
     },
     {
-      "Name": "controlesImage",
+      "Name": "pinguImage",
       "Components": [
         {
           "Component": "Image",
           "Type": "UI",
           "Parameters": {
-            "position": [ 0.4, 0.25 ],
-            "size": [ 900, 268],
-            "name": "Controles",
+            "position": [ 0.3, 0.4 ],
+            "size": [ 640, 180 ],
+            "name": "PinguImage",
             "type": "StaticImage",
             "property": [
               [
                 "Image",
-                "TaharezLook/ControlesImage"
+                "TaharezLook/DeathPingu"
+              ],
+              [
+                "FrameEnabled",
+                "false"
+              ],
+              [
+                "BackgroundEnabled",
+                "false"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Name": "scoreGOImage",
+      "Components": [
+        {
+          "Component": "Image",
+          "Type": "UI",
+          "Parameters": {
+            "position": [ 0.3, 0.4 ],
+            "size": [ 640, 180 ],
+            "name": "ScoreGOImage",
+            "type": "StaticImage",
+            "property": [
+              [
+                "Image",
+                "TaharezLook/ScoreGameOver"
               ],
               [
                 "FrameEnabled",

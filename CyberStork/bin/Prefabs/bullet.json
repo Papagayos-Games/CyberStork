@@ -4,7 +4,7 @@
         "Component": "Transform",
         "Type": "Common",
         "Parameters": {
-          "position": [ 0, 0, 0],
+          "position": [ -1000, -1000, 1000],
           "velocity": [ 0, 0, 0 ],
           "dimensions": [ 0.1, 0.1, 0.1 ],
           "rotation": [ 0, 0, 0 ]
@@ -29,6 +29,8 @@
           "restitution": 0.5,
           "linealVel": [ 0.0, 0.0, -100.0 ],
           "friction": 0.5,
+          "group":4,
+          "mask":18,
           "state": "None",
           "mShape": true
         }

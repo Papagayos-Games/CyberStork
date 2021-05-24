@@ -14,12 +14,20 @@ meteor["instantiate"] = function(params, entity)
     self.speed = 1000
   end
 
+  if p.damage ~= nil then
+    self.damage = p.damage
+  else
+    self.damage = 1
+  end
+
   self.entity = entity
   return self
 end
 
 meteor["start"] = function(_self, lua)
   local z = lua:getTransform(_self.entity):getPosition().z
+
+  _self.pos = lua:getTransform(_self.entity):getPosition()
 
   --Dimensiones del la ventana
   local halfWidth = (lua:getOgreContext():getWindowWidth()/2)
@@ -44,7 +52,45 @@ end
 
 meteor["update"] = function(_self, lua)
   --TO DO: gestion de colisiones con otros objetos y la destruccion cuando supere la z de la camara principal
-	
+     --Si sobrepasamos la posicion de la camara en z
+     if _self.pos.z > _self.lastZ then
+      lua:getCurrentScene():destroyEntity(_self.entity)
+      print("meteorito destruido XD")
+  end
+
+end
+
+meteor["onCollisionEnter"] = function(_self, lua, otherRb)
+  print("en el oncolision enter meteorito")
+
+  --TO DO :sumar puntos
+
+  local group = lua:getRigidbody(otherRb):getGroup()
+  print("cojemos el grupo al que pertenece" )
+  if group == 1 then-- si colisiona con el player
+    --cogemos el health del player
+      local healthComponent = lua:getLuaSelf(otherRb,"health")
+      --le añadimos el daño
+      if healthComponent.receiveDamage(_self.damage) == true then
+        print("player murio")
+        lua:changeScene("mainMenu")--TO DO poner nombre de la escena game over
+      end 
+      --se destruye el meteorito
+      lua:getCurrentScene():destroyEntity(_self.entity)
+      print("destruido meteorito al colisionar con el player")
+
+  elseif group == 4 then-- si colisiona con las balas del jugador
+    print("meteorito colisiona con bala jugador")
+      --destruimos la bala 
+      lua:getCurrentScene():destroyEntity(otherRb)
+      print("bala destruida")
+      lua:getCurrentScene():destroyEntity(_self.entity)
+      print("meteorito destruida")
+      print("destruida bala  y meteorito al colisionar")
+
+  end
+
+
 end
 
 return meteor

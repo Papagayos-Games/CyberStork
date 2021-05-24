@@ -6,7 +6,7 @@
         "Parameters": {
           "position": [ 0, 0, 0],
           "velocity": [ 0, 0, 0 ],
-          "dimensions": [ 1, 1, 1 ],
+          "dimensions": [ 0.1, 0.1, 0.1 ],
           "rotation": [ 0, 0, 0 ]
         }
       },
@@ -14,8 +14,9 @@
         "Component": "MeshComponent",
         "Type": "Render",
         "Parameters": {
-          "meshName": "penguin",
-          "meshMaterial": "Practica1_Azulejo"
+          "meshName": "cube",
+          "meshMaterial": "color_Amarillo"
+
         }
       },
       {
@@ -26,41 +27,22 @@
           "dampingAng": 0,
           "gravity": [ 0.0, 0.0, 0.0 ],
           "restitution": 0.5,
-          "linealVel": [ 0.0, 0.0, 0.0 ],
+          "linealVel": [ 0.0, 0.0, 150.0 ],
           "friction": 0.5,
+          "group":8,
+          "mask":1,
           "state": "None",
-          "group":1,
-          "mask":26,
           "shape": {
             "id": "Box"
           }
         }
       },
       {
-        "Component": "playerController",
+        "Component": "Crescendum",
         "Type": "LUA",
         "Parameters": {
-          "speed" : 5
+         
         }
       }
-      ,
-      {
-        "Component": "spawner",
-        "Type": "LUA",
-        "Parameters": {
-          "spawnObject" : "bullet",
-          "timeToSpawn": 2
-        }
-      }
-      ,
-      {
-        "Component": "health",
-        "Type": "LUA",
-        "Parameters": {
-          "life" : 30
-        }
-      }
-      
-
   ]
 }

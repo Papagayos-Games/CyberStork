@@ -14,7 +14,7 @@
         "Component": "MeshComponent",
         "Type": "Render",
         "Parameters": {
-          "meshName": "penguin",
+          "meshName": "ogrehead",
           "meshMaterial": "Practica1_Azulejo"
         }
       },
@@ -25,42 +25,38 @@
           "dampingLin": 0,
           "dampingAng": 0,
           "gravity": [ 0.0, 0.0, 0.0 ],
-          "restitution": 0.5,
+          "restitution": 0.1,
           "linealVel": [ 0.0, 0.0, 0.0 ],
           "friction": 0.5,
+          "group":2,
+          "mask":5,
           "state": "None",
-          "group":1,
-          "mask":26,
           "shape": {
             "id": "Box"
           }
         }
       },
       {
-        "Component": "playerController",
+        "Component": "cuervo",
         "Type": "LUA",
-        "Parameters": {
-          "speed" : 5
+        "Parameters":{
         }
-      }
-      ,
-      {
-        "Component": "spawner",
-        "Type": "LUA",
-        "Parameters": {
-          "spawnObject" : "bullet",
-          "timeToSpawn": 2
-        }
-      }
-      ,
+      },
       {
         "Component": "health",
         "Type": "LUA",
-        "Parameters": {
-          "life" : 30
+        "Parameters":{
+        }
+      },
+      {
+        "Component": "spawner",
+        "Type": "LUA",
+        "Parameters":{
+         "spawnObject":"EnemyBullet",
+         "timeToSpawn": 3,
+         "offset":100
+
         }
       }
-      
-
   ]
 }

@@ -4,9 +4,9 @@
       "Component": "Transform",
       "Type": "Common",
       "Parameters": {
-        "position": [ 200, 0, 0 ],
+        "position": [ -1000, -1000, 1000],
         "velocity": [ 0, 0, 0 ],
-        "dimensions": [ 0.5, 0.5, 0.5 ],
+        "dimensions": [ 0.1, 0.1, 0.1 ],
         "rotation": [ 0, 0, 0 ]
       }
     },
@@ -16,6 +16,7 @@
       "Parameters": {
         "meshName": "cube",
         "meshMaterial": "Practica1_Azulejo"
+
       }
     },
     {
@@ -26,9 +27,9 @@
         "dampingAng": 0,
         "gravity": [ 0.0, 0.0, 0.0 ],
         "restitution": 0.5,
-        "linealVel": [ 0.0, 0.0, 0.0 ],
+        "linealVel": [ 0.0, 0.0, 100.0 ],
         "friction": 0.5,
-        "group":2,
+        "group":16,
         "mask":5,
         "state": "None",
         "shape": {
@@ -37,11 +38,11 @@
       }
     },
     {
-      "Component": "meteor",
+      "Component": "bullet",
       "Type": "LUA",
       "Parameters": {
-        
+       
       }
     }
-  ]
+]
 }

@@ -63,6 +63,7 @@ material Practica1_Azulejo {
 		}
 	}
 }
+
 material IG2/spaceGLSL{	
 	technique {
 		pass {
@@ -222,7 +223,7 @@ material Practica1_Rojo {
 	}
 }
 
-material Practica1_Amarillo {
+material color_Amarillo {
 	technique { // first, preferred technique
 		pass { // first pass
 			diffuse 0.99 1.0 0.43
@@ -242,7 +243,7 @@ material Practica1_Marron {
 	}
 }
 
-material Practica1_Azul {
+material color_Azul {
 	technique { // first, preferred technique
 		pass { // first pass
 			diffuse 0.01 0.96 0.91
@@ -252,7 +253,7 @@ material Practica1_Azul {
 	}
 }
 
-material Practica1_Naranja {
+material color_Naranja {
 	technique { // first, preferred technique
 		pass { // first pass
 			diffuse 0.97 0.76 0.0
@@ -260,6 +261,16 @@ material Practica1_Naranja {
 			specular 0.8 0.8 0.8 68
 		}
 	}
+}
+
+material Verde {
+    technique { // first, preferred technique
+        pass { // first pass
+            diffuse 0.14 1.00 0.06
+            ambient 0.00 0.00 0.00 
+            specular 0.8 0.8 0.8 68
+        }
+    }
 }
 /////////////////////////////////////////////////////
 

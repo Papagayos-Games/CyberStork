@@ -25,7 +25,7 @@ health["instantiate"] = function (params, entity)
          print(self.life)
         if self.life <= 0 then
             print("vida menor que 0")
-            lua:getCurrentScene():destroyEntity(self.entity)
+            --lua:getCurrentScene():destroyEntity(self.entity)
             print("entidad destruida")
             return true
         end

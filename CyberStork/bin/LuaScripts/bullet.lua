@@ -47,8 +47,8 @@ bullet["onCollisionEnter"] = function(_self, lua, otherRb)
 
    elseif group == 1 then-- si colisiona con el player
         local healthComponent = lua:getLuaSelf(otherRb,"health")
-        if healthComponent.receiveDamage(_self.damage)== true then
-        lua:changeScene("mainMenu")--TO DO poner nombre de la escena game over
+        if healthComponent.receiveDamage(_self.damage, lua)== true then
+        lua:changeScene("gameOver")
         end
         
         --se destruye la bala

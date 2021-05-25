@@ -57,7 +57,7 @@
         "Component": "health",
         "Type": "LUA",
         "Parameters": {
-          "life" : 30
+          "life" : 3
         }
       }
       

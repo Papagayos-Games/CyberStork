@@ -73,7 +73,7 @@ meteor["onCollisionEnter"] = function(_self, lua, otherRb)
       --le añadimos el daño
       if healthComponent.receiveDamage(_self.damage) == true then
         print("player murio")
-        lua:changeScene("mainMenu")--TO DO poner nombre de la escena game over
+        lua:changeScene("gameOver")
       end 
       --se destruye el meteorito
       lua:getCurrentScene():destroyEntity(_self.entity)

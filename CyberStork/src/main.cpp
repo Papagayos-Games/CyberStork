@@ -24,7 +24,7 @@ int main() {
 			"TaharezLook.scheme",
 			"DejaVuSans-12.font",
 			"Scenes/scenes.json",
-			"Assets/bgMusic.mp3",
+			"Assets/Music/bgMusic.mp3",
 			"SkyPlaneMat"
 		); 
 	}

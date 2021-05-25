@@ -81,28 +81,37 @@
       "Name": "scoreGOImage",
       "Components": [
         {
-          "Component": "Image",
+          "Component": "Button",
           "Type": "UI",
           "Parameters": {
             "position": [ 0.3, 0.4 ],
             "size": [ 640, 180 ],
             "name": "ScoreGOImage",
-            "type": "StaticImage",
+            "text": "",
+            "type": "Button",
             "property": [
               [
-                "Image",
+                "NormalImage",
                 "TaharezLook/ScoreGameOver"
               ],
               [
-                "FrameEnabled",
-                "false"
+                "PushedImage",
+                "TaharezLook/ScoreGameOver"
               ],
               [
-                "BackgroundEnabled",
-                "false"
+                "HoverImage",
+                "TaharezLook/ScoreGameOver"
               ]
             ]
           }
+        }, 
+        {
+          "Component" : "score",
+          "Type" : "LUA"
+        },
+        {
+          "Component" : "showLastScore",
+          "Type" : "LUA"
         }
       ]
     }

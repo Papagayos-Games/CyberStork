@@ -8,6 +8,7 @@ score["instantiate"] = function(params, entity)
     self.scores = {}
     self.actualScore = 0
     self.maxScores = 3
+    self.lastScore = 0
     self.fileName = "Scores.txt"
     self.path = "\\Assets\\"
 
@@ -36,6 +37,9 @@ score["instantiate"] = function(params, entity)
     end
 
     local i = 0
+    
+    self.lastScore = file:read("*l")
+
     for line in file:lines() do
         table.insert(self.scores, tonumber(line));
         i = i + 1
@@ -47,40 +51,50 @@ score["instantiate"] = function(params, entity)
         print("[" .. key .. "] " .. value)
     end
 
-    self.getActualScore = function(s)
-        return s.actualScore
+    self.getActualScore = function()
+        return self.actualScore
     end
 
-    self.setActualScore = function(s, score)
-        s.actualScore = score
+    self.setActualScore = function(score)
+        self.actualScore = score
     end
 
-    self.getScores = function(s)
-        return s.scores
+    self.getLastScore = function()
+        return self.lastScore
+    end
+
+    self.addScore = function(score)
+        self.actualScore = self.actualScore + score
+    end
+
+    self.getScores = function()
+        return self.scores
     end
     
-    self.addScore = function(s)
-        table.insert(s.scores, tonumber(s.actualScore))
-        table.sort(s.scores, function(a, b) return a > b end)
+    self.registerScore = function()
+        table.insert(self.scores, tonumber(self.actualScore))
+        table.sort(self.scores, function(a, b) return a > b end)
         local count = 0
-        for _ in pairs(s.scores) do count = count + 1 end
-        if count > s.maxScores then
-            table.remove(s.scores, count)
+        for _ in pairs(self.scores) do count = count + 1 end
+        if count > self.maxScores then
+            table.remove(self.scores, count)
         end
 
         local f = assert(io.popen "cd")
         local current_dir = f:read '*l'
         assert(f:close())
     
-        local path_ = current_dir .. s.path .. s.fileName
+        local path_ = current_dir .. self.path .. self.fileName
     
         local file = assert(io.open(path_, "w"))
         if file == nil then
-            print("No se ha podido abrir el archivo " .. s.path .. s.fileName)
+            print("No se ha podido abrir el archivo " .. self.path .. self.fileName)
             return
         end
 
-        for key, value in pairs(s.getScores(s)) do -- actualcode
+        file:write(self.actualScore .. "\n")
+
+        for key, value in pairs(self.scores) do -- actualcode
             file:write(value .. "\n")
         end
 

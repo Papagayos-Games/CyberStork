@@ -22,8 +22,8 @@ end
 
 UIScore["start"] = function(_self, lua)
     _self.button = lua:getUIButton(_self.entity)
-    local s = lua:getLuaSelf(lua:getEntity("gameManager"), "score")
-    local text = s.getActualScore()
+    local s = lua:getLuaSelf(lua:getEntity("scoreGOImage"), "score")
+    local text = s.getLastScore()
     _self.button:setText(text)
 end
 

@@ -4,23 +4,32 @@ local meteor = {}
 meteor["instantiate"] = function(params, entity)
   p = JSON:decode(params)
   local self = {}
+  self.entity = entity
+  self.speed = 1000
+  self.damage = 1
+  self.score = 10
+  self.scrRange = 5
   
   --Velocidad de los meteoritos
   --TO DO: pasar mejor un rango y que asi todos los meteoritos
   --no tengan la misma velocidad
-  if p.speed ~= nil then
-    self.speed = p.speed
-  else
-    self.speed = 1000
-  end
+  if p ~= nil then
+    if p.speed ~= nil then
+      self.speed = p.speed
+    end
 
-  if p.damage ~= nil then
-    self.damage = p.damage
-  else
-    self.damage = 1
-  end
+    if p.damage ~= nil then
+      self.damage = p.damage
+    end
 
-  self.entity = entity
+    if p.score ~= nil then
+      self.score = p.score
+    end
+
+    if p.scrRange ~= nil then
+      self.scrRange = p.scrRange
+    end
+  end
   return self
 end
 
@@ -74,6 +83,7 @@ meteor["onCollisionEnter"] = function(_self, lua, otherRb)
       if healthComponent.receiveDamage(_self.damage) == true then
         print("player murio")
         lua:changeScene("gameOver")
+        lua:getLuaSelf(lua:getEntity("gameManager"), "score").registerScore()
       end 
       --se destruye el meteorito
       lua:getCurrentScene():destroyEntity(_self.entity)
@@ -82,15 +92,17 @@ meteor["onCollisionEnter"] = function(_self, lua, otherRb)
   elseif group == 4 then-- si colisiona con las balas del jugador
     print("meteorito colisiona con bala jugador")
       --destruimos la bala 
+
       lua:getCurrentScene():destroyEntity(otherRb)
       print("bala destruida")
       lua:getCurrentScene():destroyEntity(_self.entity)
       print("meteorito destruida")
       print("destruida bala  y meteorito al colisionar")
 
+      local sc = lua:getLuaSelf(lua:getEntity("gameManager"), "score")
+      sc.addScore( _self.score + math.random(0, _self.scrRange))
+      lua:getLuaSelf(lua:getEntity("ScorePanel"), "showScore").updateScoreText(sc.getActualScore())
   end
-
-
 end
 
 return meteor

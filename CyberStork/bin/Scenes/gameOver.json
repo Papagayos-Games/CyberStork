@@ -20,6 +20,9 @@
       "Prefab": "GameOverMenu/backMenuButton"
     },
     {
+      "Prefab": "pointer"
+    },
+    {
       "Name": "gameOverImage",
       "Components": [
         {

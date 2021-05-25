@@ -34,6 +34,19 @@
       "Prefab": "Player"
     },
     {
+      "Prefab": "pointer",
+      "Components": [
+        {
+          "Component": "Pointer",
+          "Type": "UI",
+          "Parameters": {
+            "pointerImage": "TaharezLook/ShootSight",
+            "visible": true
+          }
+        }
+      ]
+    },
+    {
       "Name": "meteorSpawner",
       "Components": [
         {

@@ -44,6 +44,7 @@
     <Image height="256" name="CreditsBg" width="512" xPos="768" yPos="256" />
     <Image height="68" name="TitleBg" width="512" xPos="768" yPos="512" />
     <Image height="50" name="GreenArrow" width="40" xPos="432" yPos="206" />
+    <Image height="47" name="ShootSight" width="48" xPos="384" yPos="206" />
     <Image height="50" name="PebloPuntero" width="40" xPos="472" yPos="206" />
 
 	<Image height="64" name="ClientBrush" width="64" xPos="2" yPos="2" />

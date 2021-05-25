@@ -4,8 +4,8 @@
         "Component": "Button",
         "Type": "UI",
         "Parameters": {
-          "position": [ 0.33, 0.2 ],
-          "size": [ 533, 300 ],
+          "position": [ 0.2, 0.2 ],
+          "size": [ 960, 540 ],
           "name": "Table",
           "text": "",
           "type": "Button",

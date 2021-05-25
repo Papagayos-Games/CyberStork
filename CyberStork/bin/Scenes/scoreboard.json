@@ -29,8 +29,8 @@
           "Component": "Image",
           "Type": "UI",
           "Parameters": {
-            "position": [ 0.4, 0.1 ],
-            "size": [ 400, 100 ],
+            "position": [ 0.3, 0.05 ],
+            "size": [ 640, 90 ],
             "name": "HighScoreImage",
             "type": "StaticImage",
             "property": [

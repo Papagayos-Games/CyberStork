@@ -10,7 +10,7 @@ UIclase["instantiate"] = function (params, entity)
     if p.scene ~= nil then
         self.scene = p.scene
     else
-        self.scene = "testScene"
+        self.scene = "mainMenu"
     end
     
     return self

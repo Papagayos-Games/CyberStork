@@ -30,7 +30,6 @@
         "friction": 0.5,
         "group":2,
         "mask":5,
-        "state": "None",
         "mShape":false,
         "shape": {
           "id": "Sphere",

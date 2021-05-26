@@ -51,7 +51,7 @@
         "Type": "LUA",
         "Parameters": {
           "spawnObject" : "bullet",
-          "timeToSpawn": 2
+          "timeToSpawn": 0.5
         }
       }
       ,

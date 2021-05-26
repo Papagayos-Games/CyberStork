@@ -30,7 +30,7 @@
           "friction": 0.5,
           "group":2,
           "mask":5,
-          "state": "None",
+          "state": "Trigger",
           "shape": {
             "id": "Box"
           }
@@ -46,6 +46,7 @@
         "Component": "health",
         "Type": "LUA",
         "Parameters":{
+          "life" : 1
         }
       }
   ]

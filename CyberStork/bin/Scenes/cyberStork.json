@@ -27,6 +27,66 @@
       "Prefab": "HUD/LifeIcon"
     },
     {
+      "Name": "Vida 1",
+      "Components": [
+        {
+          "Component": "Image",
+          "Type": "UI",
+          "Parameters": {
+            "position": [ 0.10, 0.05 ],
+            "size": [ 75, 75 ],
+            "name": "Lifeicon2",
+            "type": "StaticImage",
+            "active": false,
+            "property": [
+              [
+                "Image",
+                "TaharezLook/LifeIcon"
+              ],
+              [
+                "FrameEnabled",
+                "false"
+              ],
+              [
+                "BackgroundEnabled",
+                "false"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Vida 2",
+      "Components": [
+        {
+          "Component": "Image",
+          "Type": "UI",
+          "Parameters": {
+            "position": [ 0.15, 0.05 ],
+            "size": [ 75, 75 ],
+            "name": "Lifeicon3",
+            "type": "StaticImage",
+            "active": false,
+            "property": [
+              [
+                "Image",
+                "TaharezLook/LifeIcon"
+              ],
+              [
+                "FrameEnabled",
+                "false"
+              ],
+              [
+                "BackgroundEnabled",
+                "false"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
       "Prefab": "HUD/actualScore"
     },
     {

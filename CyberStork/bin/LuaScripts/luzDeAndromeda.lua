@@ -52,7 +52,7 @@ luzDeAndromeda["onCollisionEnter"] = function(_self, lua, otherRb)
     if group == 1 then-- si colisiona con el player
         local healthComponent = lua:getLuaSelf(otherRb,"health")
         healthComponent.getLife(_self.life)
-        --se destruye el el powerup
+        --se destruye el powerup
         lua:getCurrentScene():destroyEntity(_self.entity)
         print("destruido andromeda al colisionar con el player")
 

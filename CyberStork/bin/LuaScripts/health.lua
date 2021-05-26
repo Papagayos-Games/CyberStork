@@ -14,8 +14,6 @@ health["instantiate"] = function (params, entity)
 
     self.getLife = function 
         (x) self.life = self.life + x
-        print("aumenta vida")
-        print(self.life)
     
     end
     

@@ -6,7 +6,10 @@ UIScore["instantiate"] = function(params, entity)
     p = JSON:decode(params)
     local self = {}
     self.entity = entity
-
+	--Contador del sistema para sumar puntos en función del tiempo--
+	self.ticks = 0
+	--Limite de ticks a partir del cual se suma 1 punto--
+	self.ticksLimit = 15
     if p then
         if p.actualScore ~= nil then self.actualScore = p.actualScore end
     end
@@ -27,6 +30,15 @@ UIScore["start"] = function(_self, lua)
     _self.button:setText(text)
 end
 
-UIScore["update"] = function(_self, lua) end
+UIScore["update"] = function(_self, lua)
+	_self.ticks = _self.ticks + 1
+	if _self.ticks >= _self.ticksLimit then
+		local sc = lua:getLuaSelf(lua:getEntity("gameManager"), "score")
+		sc.addScore(1)
+		_self.updateScoreText(sc.getActualScore())
+		_self.ticks = 0;
+	end	
+
+end
 
 return UIScore

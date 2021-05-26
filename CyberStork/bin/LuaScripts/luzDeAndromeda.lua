@@ -38,23 +38,21 @@ luzDeAndromeda["update"] = function (_self, lua)
     --Si sobrepasamos la posicion de la camara en z
     if _self.pos.z > _self.lastZ then
         lua:getCurrentScene():destroyEntity(_self.entity)
-        print("luzDeAndromeda destruido XD")
     end
 
    
 end
 luzDeAndromeda["onCollisionEnter"] = function(_self, lua, otherRb)
      --si choca con el jugador aumentara la vida de este en _self.life puntos
-    print("en el oncolision enter Andromeda")
 
     local group = lua:getRigidbody(otherRb):getGroup()
-    print("cojemos el grupo al que pertenece" )
+	
     if group == 1 then-- si colisiona con el player
         local healthComponent = lua:getLuaSelf(otherRb,"health")
-        healthComponent.getLife(_self.life)
+        healthComponent.addLife(_self.life, lua)
+		--Aqui se llama al metodo que esconde un icono de vida en caso de quedar vidas--
         --se destruye el powerup
         lua:getCurrentScene():destroyEntity(_self.entity)
-        print("destruido andromeda al colisionar con el player")
 
     end
 end

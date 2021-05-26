@@ -51,25 +51,23 @@ cuervo["update"] = function (_self, lua)
     --Si sobrepasamos la posicion de la camara en z
     if _self.pos.z > _self.lastZ then
         lua:getCurrentScene():destroyEntity(_self.entity)
-        print("Cuervo destruido XD")
+		
     end
 end
 
 cuervo["onCollisionEnter"] = function(_self, lua, otherRb)
-    print("en el oncolision enter cuervo")
 
     --TO DO :sumar puntos
 
     local group = lua:getRigidbody(otherRb):getGroup()
-    print("cojemos el grupo al que pertenece" )
+	
     if group == 1 then-- si colisiona con el player
         local healthComponent = lua:getLuaSelf(otherRb,"health")
-        if healthComponent.receiveDamage(_self.damage) == true then
-            lua:changeScene("mainMenu")--TO DO poner nombre de la escena game over
+        if healthComponent.receiveDamage(_self.damage, lua) == true then
+            lua:changeScene("gameOver")--TO DO poner nombre de la escena game over
         end 
         --se destruye el cuervo
         lua:getCurrentScene():destroyEntity(_self.entity)
-        print("destruido cuervo al colisionar con el player")
 
     elseif group == 4 then-- si colisiona con las balas del jugador
         local healthComponent = lua:getLuaSelf(_self.entity,"health")
@@ -78,7 +76,6 @@ cuervo["onCollisionEnter"] = function(_self, lua, otherRb)
         healthComponent.receiveDamage(bulletcomponent.damage, lua)
         --destruimos la bala 
         lua:getCurrentScene():destroyEntity(otherRb)
-        print("destruida bala al colisionar")
 
     end
 

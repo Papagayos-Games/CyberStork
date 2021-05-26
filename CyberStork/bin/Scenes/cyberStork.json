@@ -27,7 +27,7 @@
       "Prefab": "HUD/LifeIcon"
     },
     {
-      "Name": "Vida 1",
+      "Name": "Vida2",
       "Components": [
         {
           "Component": "Image",
@@ -37,7 +37,7 @@
             "size": [ 75, 75 ],
             "name": "Lifeicon2",
             "type": "StaticImage",
-            "active": false,
+            "active": true,
             "property": [
               [
                 "Image",
@@ -57,7 +57,7 @@
       ]
     },
     {
-      "Name": "Vida 2",
+      "Name": "Vida3",
       "Components": [
         {
           "Component": "Image",
@@ -67,7 +67,7 @@
             "size": [ 75, 75 ],
             "name": "Lifeicon3",
             "type": "StaticImage",
-            "active": false,
+            "active": true,
             "property": [
               [
                 "Image",

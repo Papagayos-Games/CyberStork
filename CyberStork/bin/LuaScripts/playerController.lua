@@ -55,8 +55,6 @@ playerController["update"] = function (_self, lua)
         _self.rigidbody:setPosition(newPos)
     end
 
-  
-
 end
 
 return playerController

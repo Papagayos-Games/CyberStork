@@ -64,40 +64,37 @@ meteor["update"] = function(_self, lua)
      --Si sobrepasamos la posicion de la camara en z
      if _self.pos.z > _self.lastZ then
       lua:getCurrentScene():destroyEntity(_self.entity)
-      print("meteorito destruido XD")
-  end
-
+	end
 end
 
 meteor["onCollisionEnter"] = function(_self, lua, otherRb)
-  print("en el oncolision enter meteorito")
 
   --TO DO :sumar puntos
 
   local group = lua:getRigidbody(otherRb):getGroup()
-  print("cojemos el grupo al que pertenece" )
+  
   if group == 1 then-- si colisiona con el player
     --cogemos el health del player
       local healthComponent = lua:getLuaSelf(otherRb,"health")
       --le añadimos el daño
-      if healthComponent.receiveDamage(_self.damage) == true then
-        print("player murio")
+      if healthComponent.receiveDamage(_self.damage, lua) == true then
+        --print("player murio")
         lua:changeScene("gameOver")
         lua:getLuaSelf(lua:getEntity("gameManager"), "score").registerScore()
       end 
       --se destruye el meteorito
       lua:getCurrentScene():destroyEntity(_self.entity)
-      print("destruido meteorito al colisionar con el player")
+      --print("destruido meteorito al colisionar con el player")
 
   elseif group == 4 then-- si colisiona con las balas del jugador
-    print("meteorito colisiona con bala jugador")
+    --print("meteorito colisiona con bala jugador")
       --destruimos la bala 
 
       lua:getCurrentScene():destroyEntity(otherRb)
-      print("bala destruida")
+      --print("bala destruida")
       lua:getCurrentScene():destroyEntity(_self.entity)
-      print("meteorito destruida")
-      print("destruida bala  y meteorito al colisionar")
+      --print("meteorito destruida")
+      --print("destruida bala  y meteorito al colisionar")
 
       local sc = lua:getLuaSelf(lua:getEntity("gameManager"), "score")
       sc.addScore( _self.score + math.random(0, _self.scrRange))

@@ -12,24 +12,37 @@ health["instantiate"] = function (params, entity)
         self.life = 1
     end
 
-    self.getLife = function 
-        (x) self.life = self.life + x
-    
+    self.addLife = function (x, lua)
+	-- En caso de que sea el jugador
+		if self.life < 3 and self.entity:getName() == "Player" then
+			self.life = self.life + x
+			if self.life == 2 then
+				lua:getUIImage(lua:getEntity("Vida2")):setActive(true)
+			elseif self.life == 3 then
+				lua:getUIImage(lua:getEntity("Vida3")):setActive(true)
+			end
+		end
     end
     
     self.receiveDamage = function (x, lua)
-        print("recivido damage")
          self.life = self.life - x
-         print(self.life)
         if self.life <= 0 then
-            print("vida menor que 0")
             --lua:getCurrentScene():destroyEntity(self.entity)
-            print("entidad destruida")
             return true
         end
+		--Cuando se le reste vida al jugador, desaparece un icono
+		if self.entity:getName() == "Player" then
+			if(self.life == 1) then
+				lua:getUIImage(lua:getEntity("Vida2")):setActive(false)
+			elseif self.life == 2 then
+				lua:getUIImage(lua:getEntity("Vida3")):setActive(false)
+			end
+		end
+		
         return false
      end
 
+	print(self.life)
     return self
 end
 

@@ -7,7 +7,7 @@
           "position": [ -1000, -1000, 1000],
           "velocity": [ 0, 0, 0 ],
           "dimensions": [ 5, 5, 5 ],
-          "rotation": [ 0, 0, 0 ]
+          "rotation": [ 90, 0, 360 ]
         }
       },
       {

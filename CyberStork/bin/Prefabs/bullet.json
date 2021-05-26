@@ -31,7 +31,6 @@
           "friction": 0.5,
           "group": 4,
           "mask": 18,
-          "state": "None",
           "mShape": false,
           "shape": {
             "id": "Box",

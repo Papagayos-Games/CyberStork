@@ -41,7 +41,6 @@ Crescendum["update"] = function (_self, lua)
     --Si sobrepasamos la posicion de la camara en z
     if _self.pos.z > _self.lastZ then
         lua:getCurrentScene():destroyEntity(_self.entity)
-        print("Crescendum destruido XD")
     end
 
     
@@ -49,18 +48,15 @@ Crescendum["update"] = function (_self, lua)
 end
 Crescendum["onCollisionEnter"] = function(_self, lua, otherRb)
     --si choca con el jugador aumentara la velocidad de disparo en self.time
-   print("en el oncolision enter Crescendum")
 
    local group = lua:getRigidbody(otherRb):getGroup()
-   print("cojemos el grupo al que pertenece" )
+   
    if group == 1 then-- si colisiona con el player
-    print("colisiona con el jugador")
        local spawnComponent = lua:getLuaSelf(otherRb,"spawner")
-       print("")
+       
        spawnComponent.changeTimeToSpawn(_self.life, _self.time)
        --se destruye el el powerup
        lua:getCurrentScene():destroyEntity(_self.entity)
-       print("destruido crescendum al colisionar con el player")
    end
 
    end

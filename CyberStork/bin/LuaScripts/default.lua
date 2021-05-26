@@ -13,15 +13,15 @@ default["update"] = function (_self, lua)
 end
 
 default["onCollisionEnter"] = function(_self, lua, otherRb)
-    print("CollisionEnter")
+    --print("CollisionEnter")
 end
 
 default["onCollisionStay"] = function(_self, lua, otherRb)
-    print("CollisionStay")
+    --print("CollisionStay")
 end
 
 default["onCollisionExit"] = function(_self, lua, otherRb)
-    print("CollisionExit")
+    --print("CollisionExit")
 end
 
 return default

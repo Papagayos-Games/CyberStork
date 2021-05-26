@@ -5,7 +5,6 @@ local keys = assert(loadfile "LuaScripts/keycode.lua")()
 local playerController = {}
 
 playerController["instantiate"] = function (params, entity)
-    print("Instantiate: playerController")
     p = JSON:decode(params)
     local self = {}
     self.entity = entity
@@ -20,8 +19,6 @@ playerController["instantiate"] = function (params, entity)
 end
 
 playerController["start"] = function (_self, lua)
-    print("Start: playerController")
-
     --Cogemos el transform y el rigidbody del objeto
     _self.transform =  lua:getTransform(_self.entity)
     _self.rigidbody = lua:getRigidbody(_self.entity)

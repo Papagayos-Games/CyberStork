@@ -15,7 +15,10 @@ health["instantiate"] = function (params, entity)
     self.addLife = function (x, lua)
 	-- En caso de que sea el jugador
 		if self.life < 3 and self.entity:getName() == "Player" then
+
 			self.life = self.life + x
+            print("Añadiendo vida... ", self.life)
+
 			if self.life == 2 then
 				lua:getUIImage(lua:getEntity("Vida2")):setActive(true)
 			elseif self.life == 3 then
@@ -42,7 +45,6 @@ health["instantiate"] = function (params, entity)
         return false
      end
 
-	print(self.life)
     return self
 end
 

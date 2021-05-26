@@ -31,9 +31,9 @@
           "friction": 0.5,
           "group":8,
           "mask":1,
-          "state": "None",
           "shape": {
-            "id": "Box"
+            "id": "Box",
+            "size": [5, 5, 5]
           }
         }
       },

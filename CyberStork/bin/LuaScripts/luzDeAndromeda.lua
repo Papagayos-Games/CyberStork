@@ -48,6 +48,7 @@ luzDeAndromeda["onCollisionEnter"] = function(_self, lua, otherRb)
     local group = lua:getRigidbody(otherRb):getGroup()
 	
     if group == 1 then-- si colisiona con el player
+        print("ColisionPlayer")
         local healthComponent = lua:getLuaSelf(otherRb,"health")
         healthComponent.addLife(_self.life, lua)
 		--Aqui se llama al metodo que esconde un icono de vida en caso de quedar vidas--

@@ -37,7 +37,7 @@
             "size": [ 75, 75 ],
             "name": "Lifeicon2",
             "type": "StaticImage",
-            "active": true,
+            "active": false,
             "property": [
               [
                 "Image",
@@ -67,7 +67,7 @@
             "size": [ 75, 75 ],
             "name": "Lifeicon3",
             "type": "StaticImage",
-            "active": true,
+            "active": false,
             "property": [
               [
                 "Image",

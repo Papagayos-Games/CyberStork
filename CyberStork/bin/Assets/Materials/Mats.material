@@ -272,6 +272,16 @@ material Verde {
         }
     }
 }
+
+material Blanco {
+    technique { // first, preferred technique
+        pass { // first pass
+            diffuse 1.0 1.0 1.0
+            ambient 0.00 0.00 0.00 
+            specular 0.8 0.8 0.8 68
+        }
+    }
+}
 /////////////////////////////////////////////////////
 
 

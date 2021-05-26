@@ -69,6 +69,27 @@
           }
         }
       ]
+    },
+
+    {
+      "Name": "cuervoSpawner",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [ 0, 0, -1500 ]
+          }
+        },
+        {
+          "Component": "spawner",
+          "Type": "LUA",
+          "Parameters": {
+            "spawnObject": "cuervo",
+            "timeToSpawn": 8
+          }
+        }
+      ]
     }
   ]
 }

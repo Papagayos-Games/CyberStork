@@ -6,15 +6,15 @@
         "Parameters": {
           "position": [ 0, 0, 0],
           "velocity": [ 0, 0, 0 ],
-          "dimensions": [ 1, 1, 1 ],
-          "rotation": [ 0, 0, 0 ]
+          "dimensions": [ 0.05, 0.05, 0.05 ],
+          "rotation": [ 0, -90, 0 ]
         }
       },
       {
         "Component": "MeshComponent",
         "Type": "Render",
         "Parameters": {
-          "meshName": "penguin",
+          "meshName": "nave3",
           "meshMaterial": "Practica1_Azulejo"
         }
       },
@@ -30,9 +30,11 @@
           "friction": 0.5,
           "state": "None",
           "group":1,
-          "mask":26,
+          "mask": 26,
+          "mShape":  false,
           "shape": {
-            "id": "Box"
+            "id": "Sphere",
+            "radius" :  30
           }
         }
       },

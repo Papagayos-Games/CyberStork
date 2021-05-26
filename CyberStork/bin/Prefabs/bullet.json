@@ -6,7 +6,7 @@
         "Parameters": {
           "position": [ -1000, -1000, 1000],
           "velocity": [ 0, 0, 0 ],
-          "dimensions": [ 0.1, 0.1, 0.1 ],
+          "dimensions": [ 5, 5, 5 ],
           "rotation": [ 0, 0, 0 ]
         }
       },
@@ -14,8 +14,8 @@
         "Component": "MeshComponent",
         "Type": "Render",
         "Parameters": {
-          "meshName": "cube",
-          "meshMaterial": "Practica1_Azulejo"
+          "meshName": "bomba",
+          "meshMaterial": "Verde"
 
         }
       },
@@ -29,10 +29,14 @@
           "restitution": 0.5,
           "linealVel": [ 0.0, 0.0, -100.0 ],
           "friction": 0.5,
-          "group":4,
-          "mask":18,
+          "group": 4,
+          "mask": 18,
           "state": "None",
-          "mShape": true
+          "mShape": false,
+          "shape": {
+            "id": "Box",
+            "size": [ 10, 10, 10 ]
+          }
         }
       },
       {

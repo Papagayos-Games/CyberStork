@@ -6,7 +6,7 @@
       "Parameters": {
         "position": [ 0.2684, 10.054, 9.357 ],
         "velocity": [ 0, 0, 0 ],
-        "dimensions": [ 1, 1, 1 ],
+        "dimensions": [ 10, 10, 10 ],
         "rotation": [ 0, 0, 0 ]
       }
     },
@@ -16,7 +16,7 @@
       "Parameters": {
         "lightName": "luz",
         "lightType": 1,
-        "lightDirection": [ 0.0, 0.0, 1.0 ],
+        "lightDirection": [ 0.0, 0.0, 0.0 ],
         "diffuseColour": [ 1.0, 0.0, 0.0 ],
         "lightPower": 1.0,
         "visible": true,

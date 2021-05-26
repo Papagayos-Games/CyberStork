@@ -1,62 +1,64 @@
 {
-    "Components": [
-      {
-        "Component": "Transform",
-        "Type": "Common",
-        "Parameters": {
-          "position": [ 0, 0, 0],
-          "velocity": [ 0, 0, 0 ],
-          "dimensions": [ 1, 1, 1 ],
-          "rotation": [ 0, 0, 0 ]
-        }
-      },
-      {
-        "Component": "MeshComponent",
-        "Type": "Render",
-        "Parameters": {
-          "meshName": "ogrehead",
-          "meshMaterial": "Practica1_Azulejo"
-        }
-      },
-      {
-        "Component": "RigidBody",
-        "Type": "Physics",
-        "Parameters": {
-          "dampingLin": 0,
-          "dampingAng": 0,
-          "gravity": [ 0.0, 0.0, 0.0 ],
-          "restitution": 0.1,
-          "linealVel": [ 0.0, 0.0, 0.0 ],
-          "friction": 0.5,
-          "group":2,
-          "mask":5,
-          "state": "None",
-          "shape": {
-            "id": "Box"
-          }
-        }
-      },
-      {
-        "Component": "cuervo",
-        "Type": "LUA",
-        "Parameters":{
-        }
-      },
-      {
-        "Component": "health",
-        "Type": "LUA",
-        "Parameters":{
-        }
-      },
-      {
-        "Component": "spawner",
-        "Type": "LUA",
-        "Parameters":{
-         "spawnObject":"EnemyBullet",
-         "timeToSpawn": 3,
-         "offset":100
-
+  "Components": [
+    {
+      "Component": "Transform",
+      "Type": "Common",
+      "Parameters": {
+        "position": [ 0, 0, 0 ],
+        "velocity": [ 0, 0, 0 ],
+        "dimensions": [ 0.005, 0.005, 0.005 ],
+        "rotation": [ 0, 0, 0 ]
+      }
+    },
+    {
+      "Component": "MeshComponent",
+      "Type": "Render",
+      "Parameters": {
+        "meshName": "nave2",
+        "meshMaterial": "meteor_MAT"
+      }
+    },
+    {
+      "Component": "RigidBody",
+      "Type": "Physics",
+      "Parameters": {
+        "dampingLin": 0,
+        "dampingAng": 0,
+        "gravity": [ 0.0, 0.0, 0.0 ],
+        "restitution": 0.1,
+        "linealVel": [ 0.0, 0.0, 0.0 ],
+        "friction": 0.5,
+        "group": 2,
+        "mask": 5,
+        "state": "None",
+        "mShape": false,
+        "shape": {
+          "id": "Box",
+          "size": [ 50, 25, 25 ]
         }
       }
+    },
+    {
+      "Component": "cuervo",
+      "Type": "LUA",
+      "Parameters": {
+      }
+    },
+    {
+      "Component": "health",
+      "Type": "LUA",
+      "Parameters": {
+      }
+    },
+    {
+      "Component": "spawner",
+      "Type": "LUA",
+      "Parameters": {
+        "spawnObject": "EnemyBullet",
+        "timeToSpawn": 3,
+        "offset": 100
+
+      }
+    }
   ]
 }

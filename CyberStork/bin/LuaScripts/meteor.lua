@@ -85,6 +85,7 @@ meteor["onCollisionEnter"] = function(_self, lua, otherRb)
 	  lua:getTransform(luz):setPosition(_self.pos)
 	  luz:start()
       --se destruye el meteorito
+      lua:playSound("Assets/Music/Enemigos/MeteoritoDestroy.wav")
       lua:getCurrentScene():destroyEntity(_self.entity)
 		
   elseif group == 4 then -- si colisiona con las balas del jugador
@@ -94,7 +95,8 @@ meteor["onCollisionEnter"] = function(_self, lua, otherRb)
 	  local luz = lua:instantiate("luzDeAndromeda")
 	  lua:getTransform(luz):setPosition(_self.pos)
 	  luz:start()
-	  
+
+      lua:playSound("Assets/Music/Enemigos/MeteoritoDestroy.wav")
       lua:getCurrentScene():destroyEntity(_self.entity)
 
       local sc = lua:getLuaSelf(lua:getEntity("gameManager"), "score")

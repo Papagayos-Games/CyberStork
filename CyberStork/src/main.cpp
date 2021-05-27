@@ -6,13 +6,12 @@ int main() {
 
 #else
 #include <Windows.h>
-int WINAPI
-WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdShow) {
+//int WINAPI
+//WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdShow) {
+int main() {
+	HWND windowHandle = GetConsoleWindow();
+	ShowWindow(windowHandle, SW_HIDE);
 #endif
-	
-
-
-//int main() {
 #ifdef _DEBUG
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 #endif

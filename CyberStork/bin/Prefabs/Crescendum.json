@@ -6,16 +6,16 @@
         "Parameters": {
           "position": [ 0, 0, 0],
           "velocity": [ 0, 0, 0 ],
-          "dimensions": [ 0.1, 0.1, 0.1 ],
-          "rotation": [ 0, 0, 0 ]
+          "dimensions": [ 20, 20, 20 ],
+          "rotation": [ 90, 0, 0 ]
         }
       },
       {
         "Component": "MeshComponent",
         "Type": "Render",
         "Parameters": {
-          "meshName": "cube",
-          "meshMaterial": "color_Amarillo"
+          "meshName": "arrow",
+          "meshMaterial": "Blanco"
 
         }
       },
@@ -31,6 +31,7 @@
           "friction": 0.5,
           "group":8,
           "mask":1,
+          "mShape" : false,
           "state": "None",
           "shape": {
             "id": "Box"

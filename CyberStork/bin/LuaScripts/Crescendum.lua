@@ -53,7 +53,7 @@ Crescendum["onCollisionEnter"] = function(_self, lua, otherRb)
    
    if group == 1 then-- si colisiona con el player
        local spawnComponent = lua:getLuaSelf(otherRb,"spawner")
-       
+       lua:playSound("Assets/Music/Player/Bonus.wav")
        spawnComponent.changeTimeToSpawn(_self.life, _self.time)
        --se destruye el el powerup
        lua:getCurrentScene():destroyEntity(_self.entity)

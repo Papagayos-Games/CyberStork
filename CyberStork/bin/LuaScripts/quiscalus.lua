@@ -79,7 +79,8 @@ quiscalus["onCollisionEnter"] = function(_self, lua, otherRb)
         if healthComponent.receiveDamage(_self.damage, lua) == true then
             lua:changeScene("mainMenu")--TO DO poner nombre de la escena game over
         end 
-        --se destruye el cuervo
+        --se destruye el quiscalus
+        lua:playSound("Assets/Music/Enemigos/QuiscalusDestroy.wav")
         lua:getCurrentScene():destroyEntity(_self.entity)
 
     elseif group == 4 then-- si colisiona con las balas del jugador

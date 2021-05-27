@@ -6,16 +6,16 @@
         "Parameters": {
           "position": [ 0, 0, 0],
           "velocity": [ 0, 0, 0 ],
-          "dimensions": [ 0.1, 0.1, 0.1 ],
-          "rotation": [ 0, 0, 0 ]
+          "dimensions": [ 20, 20, 20 ],
+          "rotation": [ 0, 90, 0 ]
         }
       },
       {
         "Component": "MeshComponent",
         "Type": "Render",
         "Parameters": {
-          "meshName": "cube",
-          "meshMaterial": "color_Naranja"
+          "meshName": "corazon",
+          "meshMaterial": "corazon_MAT"
 
         }
       },
@@ -31,9 +31,10 @@
           "friction": 0.5,
           "group":8,
           "mask":1,
+          "mShape" : false,
           "shape": {
-            "id": "Box",
-            "size": [5, 5, 5]
+            "id": "Sphere",
+            "radious": 1
           }
         }
       },

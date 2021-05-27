@@ -242,7 +242,7 @@
           "Type": "LUA",
           "Parameters": {
             "spawnObject": "Crescendum",
-            "timeToSpawn": 10
+            "timeToSpawn": 1
           }
         }
       ]

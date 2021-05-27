@@ -24,6 +24,7 @@ end
 
 bullet["start"] = function(_self, lua)
     _self.startTime = lua:getInputManager():getTicks()
+    lua:playSound("Assets/Music/Player/Shoot.wav")
 end
 
 bullet["update"] = function(_self, lua)

@@ -67,6 +67,7 @@ cuervo["onCollisionEnter"] = function(_self, lua, otherRb)
             lua:changeScene("gameOver")--TO DO poner nombre de la escena game over
         end 
         --se destruye el cuervo
+        lua:playSound("Assets/Music/Enemigos/CuervoDestroy.wav")
         lua:getCurrentScene():destroyEntity(_self.entity)
 
     elseif group == 4 then-- si colisiona con las balas del jugador
@@ -75,6 +76,7 @@ cuervo["onCollisionEnter"] = function(_self, lua, otherRb)
         local bulletcomponent = lua:getLuaSelf(otherRb,"bullet")
         --añadimos daño
         if healthComponent.receiveDamage(bulletcomponent.damage, lua) then
+            lua:playSound("Assets/Music/Enemigos/CuervoDestroy.wav")
             lua:getCurrentScene():destroyEntity(_self.entity)
         end
         --destruimos la bala 

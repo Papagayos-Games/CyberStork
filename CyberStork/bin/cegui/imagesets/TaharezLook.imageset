@@ -2,6 +2,10 @@
     <Image height="256" name="LifeIcon" width="256" xPos="1280" yPos="0" />
     <Image height="256" name="ControlesImage" width="768" xPos="0" yPos="768" />
 
+    <Image height="128" name="SalirInGameNormalButton" width="128" xPos="1280" yPos="1024" />
+    <Image height="128" name="SalirInGameHoverButton" width="128" xPos="1408" yPos="1024" />
+    <Image height="128" name="SalirInGamePushButton" width="128" xPos="1280" yPos="1152" />
+
     <Image height="154" name="PlayNormalButton" width="256" xPos="0" yPos="256" />
     <Image height="154" name="PlayHoverButton" width="256" xPos="512" yPos="512" />
     <Image height="154" name="PlayPushButton" width="256" xPos="256" yPos="0" />

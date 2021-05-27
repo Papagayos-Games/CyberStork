@@ -6,7 +6,7 @@
         "Parameters": {
           "position": [ 0, 0, 0],
           "velocity": [ 0, 0, 0 ],
-          "dimensions": [ 1, 1, 1 ],
+          "dimensions": [ 7, 7, 7 ],
           "rotation": [ 0, 0, 0 ]
         }
       },
@@ -14,7 +14,7 @@
         "Component": "MeshComponent",
         "Type": "Render",
         "Parameters": {
-          "meshName": "ogrehead",
+          "meshName": "nave1",
           "meshMaterial": "Practica1_Rojo"
         }
       },
@@ -30,9 +30,11 @@
           "friction": 0.5,
           "group":2,
           "mask":5,
+          "mShape" : false, 
           "state": "Trigger",
           "shape": {
-            "id": "Box"
+            "id": "Box",
+            "size": [25,25,25]
           }
         }
       },

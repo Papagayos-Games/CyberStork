@@ -7,7 +7,7 @@
           "position": [ -1000, -1000, 1000],
           "velocity": [ 0, 0, 0 ],
           "dimensions": [ 5, 5, 5 ],
-          "rotation": [ 90, 0, 360 ]
+          "rotation": [ 90, 0, 0 ]
         }
       },
       {
@@ -27,7 +27,7 @@
           "dampingAng": 0,
           "gravity": [ 0.0, 0.0, 0.0 ],
           "restitution": 0.5,
-          "linealVel": [ 0.0, 0.0, -100.0 ],
+          "linealVel": [ 0.0, 0.0, -300.0 ],
           "friction": 0.5,
           "group": 4,
           "mask": 18,
@@ -42,7 +42,7 @@
         "Component": "bullet",
         "Type": "LUA",
         "Parameters": {
-         
+          "lifetime" :  5
         }
       }
   ]

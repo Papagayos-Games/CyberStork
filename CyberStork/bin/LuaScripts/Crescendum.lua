@@ -30,8 +30,8 @@ Crescendum["start"] = function (_self, lua)
   local halfWidth = (lua:getOgreContext():getWindowWidth()/2)
   local halfHeight = (lua:getOgreContext():getWindowHeight()/2)
 
-  local newX = math.random(-halfWidth+200, halfWidth-200)
-  local newY = math.random(-halfHeight+200, halfHeight-200)
+  local newX = math.random(-halfWidth+350, halfWidth-350)
+  local newY = math.random(-halfHeight+100, halfHeight-100)
 
   _self.rb:setPosition(Vector3(newX, newY, _self.pos.z))
    

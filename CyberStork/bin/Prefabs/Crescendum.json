@@ -41,7 +41,7 @@
         "Component": "Crescendum",
         "Type": "LUA",
         "Parameters": {
-         
+         "time" : 0.3
         }
       }
   ]

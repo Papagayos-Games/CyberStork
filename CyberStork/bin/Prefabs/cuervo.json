@@ -57,8 +57,7 @@
       "Parameters": {
         "spawnObject": "EnemyBullet",
         "timeToSpawn": 3,
-        "offset": 100
-
+        "offset": 1000
       }
     }
   ]

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "PapagayoEngine.h"
 
-/*#if (defined _DEBUG) || !(defined _WIN32)
+#if (defined _DEBUG) || !(defined _WIN32)
 int main() {
 
 #else
@@ -9,10 +9,10 @@ int main() {
 int WINAPI
 WinMain(HINSTANCE zhInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nCmdShow) {
 #endif
-	*/
+	
 
 
-int main() {
+//int main() {
 #ifdef _DEBUG
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 #endif

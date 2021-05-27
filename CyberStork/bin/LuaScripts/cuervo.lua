@@ -70,10 +70,13 @@ cuervo["onCollisionEnter"] = function(_self, lua, otherRb)
         lua:getCurrentScene():destroyEntity(_self.entity)
 
     elseif group == 4 then-- si colisiona con las balas del jugador
+        print("CUERVO");
         local healthComponent = lua:getLuaSelf(_self.entity,"health")
         local bulletcomponent = lua:getLuaSelf(otherRb,"bullet")
         --añadimos daño
-        healthComponent.receiveDamage(bulletcomponent.damage, lua)
+        if healthComponent.receiveDamage(bulletcomponent.damage, lua) then
+            lua:getCurrentScene():destroyEntity(_self.entity)
+        end
         --destruimos la bala 
         lua:getCurrentScene():destroyEntity(otherRb)
 

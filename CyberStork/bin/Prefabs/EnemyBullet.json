@@ -4,17 +4,17 @@
       "Component": "Transform",
       "Type": "Common",
       "Parameters": {
-        "position": [ -1000, -1000, 1000],
+        "position": [ -2000, -2000, 2000],
         "velocity": [ 0, 0, 0 ],
-        "dimensions": [ 0.1, 0.1, 0.1 ],
-        "rotation": [ 0, 0, 0 ]
+        "dimensions": [ 5, 5, 5 ],
+        "rotation": [ -90, 0, 0 ]
       }
     },
     {
       "Component": "MeshComponent",
       "Type": "Render",
       "Parameters": {
-        "meshName": "cube",
+        "meshName": "bomba",
         "meshMaterial": "Practica1_Azulejo"
 
       }
@@ -31,9 +31,10 @@
         "friction": 0.5,
         "group":16,
         "mask":5,
-        "state": "None",
+        "mShape" :  false,
         "shape": {
-          "id": "Box"
+          "id": "Box",
+           "size" :  [10,10,10]
         }
       }
     },

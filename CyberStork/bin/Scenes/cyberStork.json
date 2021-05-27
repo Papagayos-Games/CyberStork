@@ -130,7 +130,6 @@
         }
       ]
     },
-
     {
       "Name": "cuervoSpawner",
       "Components": [
@@ -146,7 +145,67 @@
           "Type": "LUA",
           "Parameters": {
             "spawnObject": "cuervo",
-            "timeToSpawn": 8
+            "timeToSpawn": 10
+          }
+        }
+      ]
+    },
+    {
+      "Name": "quiscalusSpawner",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [ 0, 0, -1500 ]
+          }
+        },
+        {
+          "Component": "spawner",
+          "Type": "LUA",
+          "Parameters": {
+            "spawnObject": "quiscalus",
+            "timeToSpawn": 2
+          }
+        }
+      ]
+    },
+    {
+      "Name": "luzDeAndromedaSpawner",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [ 0, 0, -1500 ]
+          }
+        },
+        {
+          "Component": "spawner",
+          "Type": "LUA",
+          "Parameters": {
+            "spawnObject": "luzDeAndromeda",
+            "timeToSpawn": 20
+          }
+        }
+      ]
+    },
+    {
+      "Name": "crescendumSpawner",
+      "Components": [
+        {
+          "Component": "Transform",
+          "Type": "Common",
+          "Parameters": {
+            "position": [ 0, 0, -1500 ]
+          }
+        },
+        {
+          "Component": "spawner",
+          "Type": "LUA",
+          "Parameters": {
+            "spawnObject": "Crescendum",
+            "timeToSpawn": 10
           }
         }
       ]
